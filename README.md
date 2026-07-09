@@ -1,89 +1,171 @@
 # N100 Financial Intelligence Platform
 
-## Sprint 1 – Day 1: Environment Setup
+## Project Overview
 
-### Project Overview
-
-The **N100 Financial Intelligence Platform** is a comprehensive data engineering and financial analytics project designed to build a structured financial database for NIFTY 100 companies. The platform will integrate multiple financial datasets, perform automated ETL (Extract, Transform, Load) operations, validate data quality, and prepare the foundation for advanced analytics, dashboards, APIs, and machine learning applications.
+The **N100 Financial Intelligence Platform** is a Data Engineering and Financial Analytics project designed to build a structured financial database for NIFTY 100 companies. The platform implements a complete ETL pipeline, performs automated data quality validation, stores cleaned data in SQLite, and provides a scalable foundation for financial analytics, dashboards, APIs, and machine learning applications.
 
 ---
 
-## Sprint Goal
+# Project Objectives
 
-Establish a production-ready development environment and project structure that will support the complete ETL pipeline throughout Sprint 1.
-
----
-
-## Day 1 Objectives
-
-* Set up the Python development environment.
-* Create and activate a virtual environment.
-* Initialize Git version control.
-* Create the GitHub repository.
-* Organize the project directory structure.
-* Configure project files (.env, .gitignore, requirements.txt).
-* Install required Python libraries.
-* Prepare the repository for collaborative development.
+- Build a reusable ETL pipeline
+- Load and normalize financial datasets
+- Validate data using Data Quality (DQ) rules
+- Store validated data in SQLite
+- Perform financial analysis
+- Develop interactive dashboards
+- Expose data through REST APIs
 
 ---
 
-## Project Structure
+# Tech Stack
 
-```
+- Python
+- Pandas
+- NumPy
+- SQLite
+- SQLAlchemy
+- OpenPyXL
+- Loguru
+- Pytest
+- Matplotlib
+- Plotly
+- Jupyter Notebook
+- Git & GitHub
+
+---
+
+# Current Project Structure
+
+```text
 N100-Financial-Intelligence/
 │
+├── .github/
 ├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── supplementary/
+│
 ├── db/
 ├── docs/
+├── logs/
 ├── notebooks/
 ├── output/
 ├── reports/
 ├── src/
-│   ├── etl/
-│   ├── utils/
 │   ├── config/
-│   └── api/
+│   ├── database/
+│   ├── etl/
+│   └── utils/
+│
 ├── tests/
+│   └── etl/
+│
 ├── .env
 ├── .gitignore
+├── main.py
 ├── Makefile
-├── requirements.txt
 ├── README.md
-└── main.py
+└── requirements.txt
 ```
 
 ---
 
-## Technologies Used
+# Sprint Progress
 
-* Python
-* Git & GitHub
-* Visual Studio Code
-* Virtual Environment (venv)
-* SQLite (planned)
-* Pandas
-* NumPy
-* SQLAlchemy
-* Pytest
-* Loguru
-* Rich
-* Plotly
-* Jupyter Notebook
+## Sprint 1 – Data Foundation
 
----
+### Day 1 – Environment Setup ✅
 
-## Day 1 Deliverables
+Completed:
 
-* Project repository created
-* Virtual environment configured
-* Required dependencies installed
-* Git initialized and connected to GitHub
-* Initial project structure established
-* Configuration files created
-* Initial project commit pushed successfully
+- Project initialization
+- GitHub repository setup
+- Virtual environment configuration
+- Dependency installation
+- Project folder structure
+- Configuration files
+- Initial documentation
 
 ---
 
-## Next Steps
+### Day 2 – Excel Loader & Data Normalization ✅
 
-Sprint 1 – Day 2 will focus on implementing the ETL framework, including the Excel Loader, Data Normalization module, and unit testing for normalization functions.
+Completed:
+
+- Generic Excel Loader
+- Automatic Core/Supplementary dataset detection
+- Data normalization module
+- Column normalization
+- Company ID normalization
+- Year normalization
+- Duplicate removal
+- Centralized ETL logging
+- Automated Load Audit generation (`load_audit.csv`)
+- Successfully loaded all project datasets
+
+---
+
+# Modules Implemented
+
+## ETL
+
+- Excel Loader
+- Data Normalizer
+- Logger
+- Configuration Manager
+
+---
+
+# Output Generated
+
+```
+output/
+│
+└── load_audit.csv
+```
+
+```
+logs/
+│
+└── etl.log
+```
+
+---
+
+# Upcoming Work
+
+### Sprint 1 – Day 3
+
+Implementation of the **Data Quality Validation Engine** including:
+
+- DQ-01 Primary Key Validation
+- DQ-02 Composite Key Validation
+- DQ-03 Foreign Key Validation
+- DQ-04 Balance Sheet Validation
+- DQ-05 Operating Margin Validation
+- DQ-06 Positive Sales Validation
+- Remaining DQ-07 to DQ-16 rules
+- `validation_failures.csv`
+
+---
+
+# Current Status
+
+| Sprint | Day | Status |
+|---------|-----|--------|
+| Sprint 1 | Day 1 | ✅ Completed |
+| Sprint 1 | Day 2 | ✅ Completed |
+| Sprint 1 | Day 3 | ⏳ In Progress |
+
+---
+
+# Author
+
+**Anshul Deep Bajpai**
+
+B.Tech CSE (AI & ML)
+
+N100 Financial Intelligence Platform
+
+2026
