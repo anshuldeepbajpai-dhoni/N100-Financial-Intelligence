@@ -64,3 +64,951 @@ All datasets loaded successfully.
 2026-07-09 09:13:41 | INFO | Loading peer_groups.xlsx
 2026-07-09 09:13:41 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
 2026-07-09 09:13:41 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 11:44:17 | INFO | Loading companies.xlsx
+2026-07-10 11:44:17 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 11:44:17 | INFO | Loading profitandloss.xlsx
+2026-07-10 11:44:18 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 11:44:18 | INFO | Loading balancesheet.xlsx
+2026-07-10 11:44:18 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 11:44:18 | INFO | Loading cashflow.xlsx
+2026-07-10 11:44:18 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 11:44:18 | INFO | Loading analysis.xlsx
+2026-07-10 11:44:18 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 11:44:18 | INFO | Loading documents.xlsx
+2026-07-10 11:44:18 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 11:44:18 | INFO | Loading prosandcons.xlsx
+2026-07-10 11:44:18 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 11:44:18 | INFO | Loading sectors.xlsx
+2026-07-10 11:44:18 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 11:44:18 | INFO | Loading stock_prices.xlsx
+2026-07-10 11:44:19 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 11:44:19 | INFO | Loading market_cap.xlsx
+2026-07-10 11:44:19 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 11:44:19 | INFO | Loading financial_ratios.xlsx
+2026-07-10 11:44:20 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 11:44:20 | INFO | Loading peer_groups.xlsx
+2026-07-10 11:44:20 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 11:44:20 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 11:44:20 | INFO | Validating companies.xlsx
+2026-07-10 11:44:20 | INFO | Validating profitandloss.xlsx
+2026-07-10 11:44:20 | INFO | Validating balancesheet.xlsx
+2026-07-10 11:44:20 | INFO | Validating cashflow.xlsx
+2026-07-10 11:44:20 | INFO | Validating analysis.xlsx
+2026-07-10 11:44:20 | INFO | Validating documents.xlsx
+2026-07-10 11:44:20 | INFO | Validating prosandcons.xlsx
+2026-07-10 11:44:20 | INFO | Validating sectors.xlsx
+2026-07-10 11:44:20 | INFO | Validating stock_prices.xlsx
+2026-07-10 11:44:20 | INFO | Validating market_cap.xlsx
+2026-07-10 11:44:20 | INFO | Validating financial_ratios.xlsx
+2026-07-10 11:44:20 | INFO | Validating peer_groups.xlsx
+2026-07-10 11:44:20 | SUCCESS | Validation completed.
+2026-07-10 11:54:17 | INFO | Loading companies.xlsx
+2026-07-10 11:54:18 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 11:54:18 | INFO | Loading profitandloss.xlsx
+2026-07-10 11:54:19 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 11:54:19 | INFO | Loading balancesheet.xlsx
+2026-07-10 11:54:19 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 11:54:19 | INFO | Loading cashflow.xlsx
+2026-07-10 11:54:19 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 11:54:19 | INFO | Loading analysis.xlsx
+2026-07-10 11:54:19 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 11:54:19 | INFO | Loading documents.xlsx
+2026-07-10 11:54:20 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 11:54:20 | INFO | Loading prosandcons.xlsx
+2026-07-10 11:54:20 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 11:54:20 | INFO | Loading sectors.xlsx
+2026-07-10 11:54:20 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 11:54:20 | INFO | Loading stock_prices.xlsx
+2026-07-10 11:54:21 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 11:54:21 | INFO | Loading market_cap.xlsx
+2026-07-10 11:54:21 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 11:54:21 | INFO | Loading financial_ratios.xlsx
+2026-07-10 11:54:22 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 11:54:22 | INFO | Loading peer_groups.xlsx
+2026-07-10 11:54:22 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 11:54:22 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 11:54:22 | INFO | Validating companies.xlsx
+2026-07-10 11:54:22 | INFO | Validating profitandloss.xlsx
+2026-07-10 11:54:22 | INFO | Validating balancesheet.xlsx
+2026-07-10 11:54:22 | INFO | Validating cashflow.xlsx
+2026-07-10 11:54:22 | INFO | Validating analysis.xlsx
+2026-07-10 11:54:22 | INFO | Validating documents.xlsx
+2026-07-10 11:54:22 | INFO | Validating prosandcons.xlsx
+2026-07-10 11:54:22 | INFO | Validating sectors.xlsx
+2026-07-10 11:54:22 | INFO | Validating stock_prices.xlsx
+2026-07-10 11:54:22 | INFO | Validating market_cap.xlsx
+2026-07-10 11:54:22 | INFO | Validating financial_ratios.xlsx
+2026-07-10 11:54:22 | INFO | Validating peer_groups.xlsx
+2026-07-10 11:54:22 | SUCCESS | Validation report generated.
+2026-07-10 11:57:30 | INFO | Loading companies.xlsx
+2026-07-10 11:57:30 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 11:57:30 | INFO | Loading profitandloss.xlsx
+2026-07-10 11:57:30 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 11:57:30 | INFO | Loading balancesheet.xlsx
+2026-07-10 11:57:31 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 11:57:31 | INFO | Loading cashflow.xlsx
+2026-07-10 11:57:31 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 11:57:31 | INFO | Loading analysis.xlsx
+2026-07-10 11:57:31 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 11:57:31 | INFO | Loading documents.xlsx
+2026-07-10 11:57:31 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 11:57:31 | INFO | Loading prosandcons.xlsx
+2026-07-10 11:57:31 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 11:57:31 | INFO | Loading sectors.xlsx
+2026-07-10 11:57:31 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 11:57:31 | INFO | Loading stock_prices.xlsx
+2026-07-10 11:57:32 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 11:57:32 | INFO | Loading market_cap.xlsx
+2026-07-10 11:57:32 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 11:57:32 | INFO | Loading financial_ratios.xlsx
+2026-07-10 11:57:32 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 11:57:32 | INFO | Loading peer_groups.xlsx
+2026-07-10 11:57:32 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 11:57:32 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 11:57:32 | INFO | Validating companies.xlsx
+2026-07-10 11:57:32 | INFO | Validating profitandloss.xlsx
+2026-07-10 11:57:32 | INFO | Validating balancesheet.xlsx
+2026-07-10 11:57:32 | INFO | Validating cashflow.xlsx
+2026-07-10 11:57:32 | INFO | Validating analysis.xlsx
+2026-07-10 11:57:32 | INFO | Validating documents.xlsx
+2026-07-10 11:57:32 | INFO | Validating prosandcons.xlsx
+2026-07-10 11:57:32 | INFO | Validating sectors.xlsx
+2026-07-10 11:57:32 | INFO | Validating stock_prices.xlsx
+2026-07-10 11:57:32 | INFO | Validating market_cap.xlsx
+2026-07-10 11:57:33 | INFO | Validating financial_ratios.xlsx
+2026-07-10 11:57:33 | INFO | Validating peer_groups.xlsx
+2026-07-10 11:57:33 | SUCCESS | Validation report generated.
+2026-07-10 12:01:08 | INFO | Loading companies.xlsx
+2026-07-10 12:01:09 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:01:09 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:01:09 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:01:09 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:01:09 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:01:09 | INFO | Loading cashflow.xlsx
+2026-07-10 12:01:09 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:01:09 | INFO | Loading analysis.xlsx
+2026-07-10 12:01:09 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:01:09 | INFO | Loading documents.xlsx
+2026-07-10 12:01:10 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:01:10 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:01:10 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:01:10 | INFO | Loading sectors.xlsx
+2026-07-10 12:01:10 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:01:10 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:01:10 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:01:10 | INFO | Loading market_cap.xlsx
+2026-07-10 12:01:11 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:01:11 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:01:11 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:01:11 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:01:11 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:01:11 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:01:11 | INFO | Validating companies.xlsx
+2026-07-10 12:01:11 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:01:11 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:01:11 | INFO | Validating cashflow.xlsx
+2026-07-10 12:01:11 | INFO | Validating analysis.xlsx
+2026-07-10 12:01:11 | INFO | Validating documents.xlsx
+2026-07-10 12:01:11 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:01:11 | INFO | Validating sectors.xlsx
+2026-07-10 12:01:11 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:01:11 | INFO | Validating market_cap.xlsx
+2026-07-10 12:01:11 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:01:11 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:01:11 | SUCCESS | Validation report generated.
+2026-07-10 12:03:08 | INFO | Loading companies.xlsx
+2026-07-10 12:03:09 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:03:09 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:03:09 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:03:09 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:03:09 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:03:09 | INFO | Loading cashflow.xlsx
+2026-07-10 12:03:09 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:03:09 | INFO | Loading analysis.xlsx
+2026-07-10 12:03:09 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:03:09 | INFO | Loading documents.xlsx
+2026-07-10 12:03:10 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:03:10 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:03:10 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:03:10 | INFO | Loading sectors.xlsx
+2026-07-10 12:03:10 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:03:10 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:03:10 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:03:10 | INFO | Loading market_cap.xlsx
+2026-07-10 12:03:10 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:03:10 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:03:11 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:03:11 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:03:11 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:03:11 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:03:11 | INFO | Validating companies.xlsx
+2026-07-10 12:03:11 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:03:11 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:03:11 | INFO | Validating cashflow.xlsx
+2026-07-10 12:03:11 | INFO | Validating analysis.xlsx
+2026-07-10 12:03:11 | INFO | Validating documents.xlsx
+2026-07-10 12:03:11 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:03:11 | INFO | Validating sectors.xlsx
+2026-07-10 12:03:11 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:03:11 | INFO | Validating market_cap.xlsx
+2026-07-10 12:03:11 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:03:11 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:03:11 | SUCCESS | Validation report generated.
+2026-07-10 12:03:54 | INFO | Loading companies.xlsx
+2026-07-10 12:03:55 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:03:55 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:03:55 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:03:55 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:03:55 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:03:55 | INFO | Loading cashflow.xlsx
+2026-07-10 12:03:55 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:03:55 | INFO | Loading analysis.xlsx
+2026-07-10 12:03:55 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:03:55 | INFO | Loading documents.xlsx
+2026-07-10 12:03:55 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:03:55 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:03:55 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:03:55 | INFO | Loading sectors.xlsx
+2026-07-10 12:03:56 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:03:56 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:03:56 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:03:56 | INFO | Loading market_cap.xlsx
+2026-07-10 12:03:56 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:03:56 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:03:57 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:03:57 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:03:57 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:03:57 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:03:57 | INFO | Validating companies.xlsx
+2026-07-10 12:03:57 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:03:57 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:03:57 | INFO | Validating cashflow.xlsx
+2026-07-10 12:03:57 | INFO | Validating analysis.xlsx
+2026-07-10 12:03:57 | INFO | Validating documents.xlsx
+2026-07-10 12:03:57 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:03:57 | INFO | Validating sectors.xlsx
+2026-07-10 12:03:57 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:03:57 | INFO | Validating market_cap.xlsx
+2026-07-10 12:03:57 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:03:57 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:03:57 | SUCCESS | Validation report generated.
+2026-07-10 12:05:34 | INFO | Loading companies.xlsx
+2026-07-10 12:05:34 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:05:34 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:05:35 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:05:35 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:05:35 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:05:35 | INFO | Loading cashflow.xlsx
+2026-07-10 12:05:35 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:05:35 | INFO | Loading analysis.xlsx
+2026-07-10 12:05:35 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:05:35 | INFO | Loading documents.xlsx
+2026-07-10 12:05:35 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:05:35 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:05:35 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:05:35 | INFO | Loading sectors.xlsx
+2026-07-10 12:05:35 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:05:35 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:05:36 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:05:36 | INFO | Loading market_cap.xlsx
+2026-07-10 12:05:36 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:05:36 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:05:36 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:05:36 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:05:36 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:05:36 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:05:36 | INFO | Validating companies.xlsx
+2026-07-10 12:05:36 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:05:36 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:05:36 | INFO | Validating cashflow.xlsx
+2026-07-10 12:05:36 | INFO | Validating analysis.xlsx
+2026-07-10 12:05:36 | INFO | Validating documents.xlsx
+2026-07-10 12:05:36 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:05:36 | INFO | Validating sectors.xlsx
+2026-07-10 12:05:37 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:05:37 | INFO | Validating market_cap.xlsx
+2026-07-10 12:05:37 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:05:37 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:05:37 | SUCCESS | Validation report generated.
+2026-07-10 12:19:52 | INFO | Loading companies.xlsx
+2026-07-10 12:19:53 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:19:53 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:19:53 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:19:53 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:19:53 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:19:53 | INFO | Loading cashflow.xlsx
+2026-07-10 12:19:53 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:19:53 | INFO | Loading analysis.xlsx
+2026-07-10 12:19:53 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:19:53 | INFO | Loading documents.xlsx
+2026-07-10 12:19:54 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:19:54 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:19:54 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:19:54 | INFO | Loading sectors.xlsx
+2026-07-10 12:19:54 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:19:54 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:19:54 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:19:54 | INFO | Loading market_cap.xlsx
+2026-07-10 12:19:54 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:19:54 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:19:55 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:19:55 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:19:55 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:19:55 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:19:55 | INFO | Validating companies.xlsx
+2026-07-10 12:19:55 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:19:55 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:19:55 | INFO | Validating cashflow.xlsx
+2026-07-10 12:19:55 | INFO | Validating analysis.xlsx
+2026-07-10 12:19:55 | INFO | Validating documents.xlsx
+2026-07-10 12:19:55 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:19:55 | INFO | Validating sectors.xlsx
+2026-07-10 12:19:55 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:19:55 | INFO | Validating market_cap.xlsx
+2026-07-10 12:19:55 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:19:55 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:19:55 | SUCCESS | Validation report generated.
+2026-07-10 12:22:11 | INFO | Loading companies.xlsx
+2026-07-10 12:22:12 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:22:12 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:22:12 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:22:12 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:22:13 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:22:13 | INFO | Loading cashflow.xlsx
+2026-07-10 12:22:13 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:22:13 | INFO | Loading analysis.xlsx
+2026-07-10 12:22:13 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:22:13 | INFO | Loading documents.xlsx
+2026-07-10 12:22:13 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:22:13 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:22:13 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:22:13 | INFO | Loading sectors.xlsx
+2026-07-10 12:22:13 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:22:13 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:22:14 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:22:14 | INFO | Loading market_cap.xlsx
+2026-07-10 12:22:14 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:22:14 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:22:14 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:22:14 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:22:14 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:22:14 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:22:14 | INFO | Validating companies.xlsx
+2026-07-10 12:22:14 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:22:14 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:22:14 | INFO | Validating cashflow.xlsx
+2026-07-10 12:22:14 | INFO | Validating analysis.xlsx
+2026-07-10 12:22:14 | INFO | Validating documents.xlsx
+2026-07-10 12:22:14 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:22:14 | INFO | Validating sectors.xlsx
+2026-07-10 12:22:14 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:22:14 | INFO | Validating market_cap.xlsx
+2026-07-10 12:22:14 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:22:15 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:22:15 | SUCCESS | Validation report generated.
+2026-07-10 12:26:07 | INFO | Loading companies.xlsx
+2026-07-10 12:26:07 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:26:07 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:26:08 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:26:08 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:26:08 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:26:08 | INFO | Loading cashflow.xlsx
+2026-07-10 12:26:08 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:26:08 | INFO | Loading analysis.xlsx
+2026-07-10 12:26:08 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:26:08 | INFO | Loading documents.xlsx
+2026-07-10 12:26:08 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:26:08 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:26:08 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:26:08 | INFO | Loading sectors.xlsx
+2026-07-10 12:26:08 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:26:08 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:26:09 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:26:09 | INFO | Loading market_cap.xlsx
+2026-07-10 12:26:09 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:26:09 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:26:09 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:26:09 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:26:09 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:26:09 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:26:09 | INFO | Validating companies.xlsx
+2026-07-10 12:26:09 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:26:09 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:26:09 | INFO | Validating cashflow.xlsx
+2026-07-10 12:26:09 | INFO | Validating analysis.xlsx
+2026-07-10 12:26:09 | INFO | Validating documents.xlsx
+2026-07-10 12:26:09 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:26:09 | INFO | Validating sectors.xlsx
+2026-07-10 12:26:09 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:26:09 | INFO | Validating market_cap.xlsx
+2026-07-10 12:26:09 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:26:09 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:26:10 | SUCCESS | Validation report generated.
+2026-07-10 12:30:53 | INFO | Loading companies.xlsx
+2026-07-10 12:30:53 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:30:53 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:30:54 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:30:54 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:30:54 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:30:54 | INFO | Loading cashflow.xlsx
+2026-07-10 12:30:54 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:30:54 | INFO | Loading analysis.xlsx
+2026-07-10 12:30:54 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:30:54 | INFO | Loading documents.xlsx
+2026-07-10 12:30:54 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:30:54 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:30:54 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:30:54 | INFO | Loading sectors.xlsx
+2026-07-10 12:30:54 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:30:54 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:30:55 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:30:55 | INFO | Loading market_cap.xlsx
+2026-07-10 12:30:55 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:30:55 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:30:55 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:30:55 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:30:55 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:30:55 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:30:55 | INFO | Validating companies.xlsx
+2026-07-10 12:30:55 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:30:55 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:30:55 | INFO | Validating cashflow.xlsx
+2026-07-10 12:30:55 | INFO | Validating analysis.xlsx
+2026-07-10 12:30:55 | INFO | Validating documents.xlsx
+2026-07-10 12:30:55 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:30:55 | INFO | Validating sectors.xlsx
+2026-07-10 12:30:55 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:30:55 | INFO | Validating market_cap.xlsx
+2026-07-10 12:30:55 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:30:55 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:30:55 | SUCCESS | Validation report generated.
+2026-07-10 12:34:45 | INFO | Loading companies.xlsx
+2026-07-10 12:34:46 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:34:46 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:34:46 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:34:46 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:34:47 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:34:47 | INFO | Loading cashflow.xlsx
+2026-07-10 12:34:47 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:34:47 | INFO | Loading analysis.xlsx
+2026-07-10 12:34:47 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:34:47 | INFO | Loading documents.xlsx
+2026-07-10 12:34:47 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:34:47 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:34:47 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:34:47 | INFO | Loading sectors.xlsx
+2026-07-10 12:34:47 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:34:47 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:34:48 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:34:48 | INFO | Loading market_cap.xlsx
+2026-07-10 12:34:48 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:34:48 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:34:48 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:34:48 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:34:48 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:34:48 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:34:48 | INFO | Validating companies.xlsx
+2026-07-10 12:34:48 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:34:48 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:34:48 | INFO | Validating cashflow.xlsx
+2026-07-10 12:34:48 | INFO | Validating analysis.xlsx
+2026-07-10 12:34:48 | INFO | Validating documents.xlsx
+2026-07-10 12:34:48 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:34:48 | INFO | Validating sectors.xlsx
+2026-07-10 12:34:48 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:34:48 | INFO | Validating market_cap.xlsx
+2026-07-10 12:34:48 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:34:48 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:34:48 | SUCCESS | Validation report generated.
+2026-07-10 12:36:18 | INFO | Loading companies.xlsx
+2026-07-10 12:36:19 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:36:19 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:36:19 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:36:19 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:36:20 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:36:20 | INFO | Loading cashflow.xlsx
+2026-07-10 12:36:20 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:36:20 | INFO | Loading analysis.xlsx
+2026-07-10 12:36:20 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:36:20 | INFO | Loading documents.xlsx
+2026-07-10 12:36:20 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:36:20 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:36:20 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:36:20 | INFO | Loading sectors.xlsx
+2026-07-10 12:36:20 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:36:20 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:36:21 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:36:21 | INFO | Loading market_cap.xlsx
+2026-07-10 12:36:21 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:36:21 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:36:21 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:36:21 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:36:21 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:36:21 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:36:21 | INFO | Validating companies.xlsx
+2026-07-10 12:36:21 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:36:21 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:36:21 | INFO | Validating cashflow.xlsx
+2026-07-10 12:36:21 | INFO | Validating analysis.xlsx
+2026-07-10 12:36:21 | INFO | Validating documents.xlsx
+2026-07-10 12:36:21 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:36:21 | INFO | Validating sectors.xlsx
+2026-07-10 12:36:21 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:36:21 | INFO | Validating market_cap.xlsx
+2026-07-10 12:36:21 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:36:21 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:36:21 | SUCCESS | Validation report generated.
+2026-07-10 12:38:09 | INFO | Loading companies.xlsx
+2026-07-10 12:38:09 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:38:09 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:38:09 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:38:09 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:38:09 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:38:09 | INFO | Loading cashflow.xlsx
+2026-07-10 12:38:10 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:38:10 | INFO | Loading analysis.xlsx
+2026-07-10 12:38:10 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:38:10 | INFO | Loading documents.xlsx
+2026-07-10 12:38:10 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:38:10 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:38:10 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:38:10 | INFO | Loading sectors.xlsx
+2026-07-10 12:38:10 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:38:10 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:38:10 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:38:10 | INFO | Loading market_cap.xlsx
+2026-07-10 12:38:10 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:38:10 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:38:11 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:38:11 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:38:11 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:38:11 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:38:11 | INFO | Validating companies.xlsx
+2026-07-10 12:38:11 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:38:11 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:38:11 | INFO | Validating cashflow.xlsx
+2026-07-10 12:38:11 | INFO | Validating analysis.xlsx
+2026-07-10 12:38:11 | INFO | Validating documents.xlsx
+2026-07-10 12:38:11 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:38:11 | INFO | Validating sectors.xlsx
+2026-07-10 12:38:11 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:38:11 | INFO | Validating market_cap.xlsx
+2026-07-10 12:38:11 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:38:11 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:38:11 | SUCCESS | Validation report generated.
+2026-07-10 12:42:04 | INFO | Loading companies.xlsx
+2026-07-10 12:42:04 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:42:04 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:42:05 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:42:05 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:42:05 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:42:05 | INFO | Loading cashflow.xlsx
+2026-07-10 12:42:05 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:42:05 | INFO | Loading analysis.xlsx
+2026-07-10 12:42:05 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:42:05 | INFO | Loading documents.xlsx
+2026-07-10 12:42:05 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:42:05 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:42:05 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:42:05 | INFO | Loading sectors.xlsx
+2026-07-10 12:42:05 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:42:05 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:42:06 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:42:06 | INFO | Loading market_cap.xlsx
+2026-07-10 12:42:06 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:42:06 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:42:06 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:42:06 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:42:06 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:42:06 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:46:22 | INFO | Loading companies.xlsx
+2026-07-10 12:46:22 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 12:46:22 | INFO | Loading profitandloss.xlsx
+2026-07-10 12:46:22 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 12:46:22 | INFO | Loading balancesheet.xlsx
+2026-07-10 12:46:23 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 12:46:23 | INFO | Loading cashflow.xlsx
+2026-07-10 12:46:23 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 12:46:23 | INFO | Loading analysis.xlsx
+2026-07-10 12:46:23 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 12:46:23 | INFO | Loading documents.xlsx
+2026-07-10 12:46:23 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 12:46:23 | INFO | Loading prosandcons.xlsx
+2026-07-10 12:46:23 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 12:46:23 | INFO | Loading sectors.xlsx
+2026-07-10 12:46:23 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 12:46:23 | INFO | Loading stock_prices.xlsx
+2026-07-10 12:46:24 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 12:46:24 | INFO | Loading market_cap.xlsx
+2026-07-10 12:46:24 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 12:46:24 | INFO | Loading financial_ratios.xlsx
+2026-07-10 12:46:24 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 12:46:24 | INFO | Loading peer_groups.xlsx
+2026-07-10 12:46:24 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 12:46:24 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 12:46:24 | INFO | Validating companies.xlsx
+2026-07-10 12:46:24 | INFO | Validating profitandloss.xlsx
+2026-07-10 12:46:24 | INFO | Validating balancesheet.xlsx
+2026-07-10 12:46:24 | INFO | Validating cashflow.xlsx
+2026-07-10 12:46:24 | INFO | Validating analysis.xlsx
+2026-07-10 12:46:24 | INFO | Validating documents.xlsx
+2026-07-10 12:46:24 | INFO | Validating prosandcons.xlsx
+2026-07-10 12:46:24 | INFO | Validating sectors.xlsx
+2026-07-10 12:46:24 | INFO | Validating stock_prices.xlsx
+2026-07-10 12:46:24 | INFO | Validating market_cap.xlsx
+2026-07-10 12:46:24 | INFO | Validating financial_ratios.xlsx
+2026-07-10 12:46:24 | INFO | Validating peer_groups.xlsx
+2026-07-10 12:46:24 | SUCCESS | Validation report generated successfully.
+2026-07-10 13:01:24 | INFO | Loading companies.xlsx
+2026-07-10 13:01:24 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:01:24 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:01:25 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:01:25 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:01:25 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:01:25 | INFO | Loading cashflow.xlsx
+2026-07-10 13:01:25 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:01:25 | INFO | Loading analysis.xlsx
+2026-07-10 13:01:25 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:01:25 | INFO | Loading documents.xlsx
+2026-07-10 13:01:25 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:01:25 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:01:25 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:01:25 | INFO | Loading sectors.xlsx
+2026-07-10 13:01:26 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:01:26 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:01:27 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:01:27 | INFO | Loading market_cap.xlsx
+2026-07-10 13:01:27 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:01:27 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:01:27 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:01:27 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:01:27 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:01:27 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:01:27 | INFO | Starting Data Quality Validation...
+2026-07-10 13:01:27 | INFO | Validating companies.xlsx
+2026-07-10 13:04:23 | INFO | Loading companies.xlsx
+2026-07-10 13:04:24 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:04:24 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:04:24 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:04:24 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:04:24 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:04:24 | INFO | Loading cashflow.xlsx
+2026-07-10 13:04:24 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:04:24 | INFO | Loading analysis.xlsx
+2026-07-10 13:04:24 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:04:24 | INFO | Loading documents.xlsx
+2026-07-10 13:04:25 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:04:25 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:04:25 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:04:25 | INFO | Loading sectors.xlsx
+2026-07-10 13:04:25 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:04:25 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:04:25 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:04:25 | INFO | Loading market_cap.xlsx
+2026-07-10 13:04:26 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:04:26 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:04:26 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:04:26 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:04:26 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:04:26 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:04:26 | INFO | Starting Data Quality Validation...
+2026-07-10 13:04:26 | INFO | Validating companies.xlsx
+2026-07-10 13:06:33 | INFO | Loading companies.xlsx
+2026-07-10 13:06:33 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:06:33 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:06:34 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:06:34 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:06:34 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:06:34 | INFO | Loading cashflow.xlsx
+2026-07-10 13:06:34 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:06:34 | INFO | Loading analysis.xlsx
+2026-07-10 13:06:34 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:06:34 | INFO | Loading documents.xlsx
+2026-07-10 13:06:34 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:06:34 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:06:34 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:06:34 | INFO | Loading sectors.xlsx
+2026-07-10 13:06:34 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:06:34 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:06:35 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:06:35 | INFO | Loading market_cap.xlsx
+2026-07-10 13:06:35 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:06:35 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:06:35 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:06:35 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:06:35 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:06:35 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:06:35 | INFO | Starting Data Quality Validation...
+2026-07-10 13:06:35 | INFO | Validating companies.xlsx
+2026-07-10 13:06:35 | INFO | Validating profitandloss.xlsx
+2026-07-10 13:06:35 | INFO | Validating balancesheet.xlsx
+2026-07-10 13:06:35 | INFO | Validating cashflow.xlsx
+2026-07-10 13:06:35 | INFO | Validating analysis.xlsx
+2026-07-10 13:06:35 | INFO | Validating documents.xlsx
+2026-07-10 13:06:35 | INFO | Validating prosandcons.xlsx
+2026-07-10 13:06:35 | INFO | Validating sectors.xlsx
+2026-07-10 13:06:35 | INFO | Validating stock_prices.xlsx
+2026-07-10 13:06:35 | INFO | Validating market_cap.xlsx
+2026-07-10 13:06:35 | INFO | Validating financial_ratios.xlsx
+2026-07-10 13:06:35 | INFO | Validating peer_groups.xlsx
+2026-07-10 13:06:35 | SUCCESS | Validation report saved successfully.
+2026-07-10 13:12:47 | INFO | Loading companies.xlsx
+2026-07-10 13:12:47 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:12:47 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:12:47 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:12:47 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:12:47 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:12:47 | INFO | Loading cashflow.xlsx
+2026-07-10 13:12:48 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:12:48 | INFO | Loading analysis.xlsx
+2026-07-10 13:12:48 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:12:48 | INFO | Loading documents.xlsx
+2026-07-10 13:12:48 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:12:48 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:12:48 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:12:48 | INFO | Loading sectors.xlsx
+2026-07-10 13:12:48 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:12:48 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:12:49 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:12:49 | INFO | Loading market_cap.xlsx
+2026-07-10 13:12:49 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:12:49 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:12:49 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:12:49 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:12:49 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:12:49 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:12:49 | INFO | Starting Data Quality Validation...
+2026-07-10 13:12:49 | INFO | Validating companies.xlsx
+2026-07-10 13:12:49 | INFO | Validating profitandloss.xlsx
+2026-07-10 13:12:49 | INFO | Validating balancesheet.xlsx
+2026-07-10 13:12:49 | INFO | Validating cashflow.xlsx
+2026-07-10 13:12:49 | INFO | Validating analysis.xlsx
+2026-07-10 13:12:49 | INFO | Validating documents.xlsx
+2026-07-10 13:12:49 | INFO | Validating prosandcons.xlsx
+2026-07-10 13:12:49 | INFO | Validating sectors.xlsx
+2026-07-10 13:12:49 | INFO | Validating stock_prices.xlsx
+2026-07-10 13:12:49 | INFO | Validating market_cap.xlsx
+2026-07-10 13:12:49 | INFO | Validating financial_ratios.xlsx
+2026-07-10 13:12:49 | INFO | Validating peer_groups.xlsx
+2026-07-10 13:12:49 | SUCCESS | Validation report saved successfully.
+2026-07-10 13:24:26 | INFO | Loading companies.xlsx
+2026-07-10 13:24:27 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:24:27 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:24:27 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:24:27 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:24:27 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:24:27 | INFO | Loading cashflow.xlsx
+2026-07-10 13:24:27 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:24:27 | INFO | Loading analysis.xlsx
+2026-07-10 13:24:27 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:24:27 | INFO | Loading documents.xlsx
+2026-07-10 13:24:27 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:24:27 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:24:27 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:24:27 | INFO | Loading sectors.xlsx
+2026-07-10 13:24:27 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:24:27 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:24:28 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:24:28 | INFO | Loading market_cap.xlsx
+2026-07-10 13:24:28 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:24:28 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:24:28 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:24:28 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:24:28 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:24:28 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:24:28 | INFO | Starting Data Quality Validation...
+2026-07-10 13:24:28 | INFO | Validating companies.xlsx
+2026-07-10 13:24:28 | INFO | Validating profitandloss.xlsx
+2026-07-10 13:24:28 | INFO | Validating balancesheet.xlsx
+2026-07-10 13:24:28 | INFO | Validating cashflow.xlsx
+2026-07-10 13:24:28 | INFO | Validating analysis.xlsx
+2026-07-10 13:24:28 | INFO | Validating documents.xlsx
+2026-07-10 13:24:28 | INFO | Validating prosandcons.xlsx
+2026-07-10 13:24:28 | INFO | Validating sectors.xlsx
+2026-07-10 13:24:28 | INFO | Validating stock_prices.xlsx
+2026-07-10 13:24:28 | INFO | Validating market_cap.xlsx
+2026-07-10 13:24:28 | INFO | Validating financial_ratios.xlsx
+2026-07-10 13:24:28 | INFO | Validating peer_groups.xlsx
+2026-07-10 13:24:28 | SUCCESS | Validation report saved successfully.
+2026-07-10 13:28:25 | INFO | Loading companies.xlsx
+2026-07-10 13:28:25 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:28:25 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:28:25 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:28:25 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:28:26 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:28:26 | INFO | Loading cashflow.xlsx
+2026-07-10 13:28:26 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:28:26 | INFO | Loading analysis.xlsx
+2026-07-10 13:28:26 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:28:26 | INFO | Loading documents.xlsx
+2026-07-10 13:28:26 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:28:26 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:28:26 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:28:26 | INFO | Loading sectors.xlsx
+2026-07-10 13:28:26 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:28:26 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:28:26 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:28:26 | INFO | Loading market_cap.xlsx
+2026-07-10 13:28:26 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:28:26 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:28:27 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:28:27 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:28:27 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:28:27 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:28:27 | INFO | Starting Data Quality Validation...
+2026-07-10 13:28:27 | INFO | Validating companies.xlsx
+2026-07-10 13:28:27 | INFO | Validating profitandloss.xlsx
+2026-07-10 13:28:27 | INFO | Validating balancesheet.xlsx
+2026-07-10 13:28:27 | INFO | Validating cashflow.xlsx
+2026-07-10 13:28:27 | INFO | Validating analysis.xlsx
+2026-07-10 13:28:27 | INFO | Validating documents.xlsx
+2026-07-10 13:28:27 | INFO | Validating prosandcons.xlsx
+2026-07-10 13:28:27 | INFO | Validating sectors.xlsx
+2026-07-10 13:28:27 | INFO | Validating stock_prices.xlsx
+2026-07-10 13:28:27 | INFO | Validating market_cap.xlsx
+2026-07-10 13:28:27 | INFO | Validating financial_ratios.xlsx
+2026-07-10 13:28:27 | INFO | Validating peer_groups.xlsx
+2026-07-10 13:28:27 | SUCCESS | Validation report saved successfully.
+2026-07-10 13:32:38 | INFO | Loading companies.xlsx
+2026-07-10 13:32:38 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:32:38 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:32:38 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:32:38 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:32:38 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:32:38 | INFO | Loading cashflow.xlsx
+2026-07-10 13:32:38 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:32:38 | INFO | Loading analysis.xlsx
+2026-07-10 13:32:38 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:32:38 | INFO | Loading documents.xlsx
+2026-07-10 13:32:38 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:32:38 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:32:38 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:32:38 | INFO | Loading sectors.xlsx
+2026-07-10 13:32:38 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:32:38 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:32:39 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:32:39 | INFO | Loading market_cap.xlsx
+2026-07-10 13:32:39 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:32:39 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:32:39 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:32:39 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:32:39 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:32:39 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:32:39 | INFO | Starting Data Quality Validation...
+2026-07-10 13:32:39 | INFO | Validating companies.xlsx
+2026-07-10 13:32:39 | INFO | Validating profitandloss.xlsx
+2026-07-10 13:32:39 | INFO | Validating balancesheet.xlsx
+2026-07-10 13:32:39 | INFO | Validating cashflow.xlsx
+2026-07-10 13:32:39 | INFO | Validating analysis.xlsx
+2026-07-10 13:32:39 | INFO | Validating documents.xlsx
+2026-07-10 13:32:39 | INFO | Validating prosandcons.xlsx
+2026-07-10 13:32:39 | INFO | Validating sectors.xlsx
+2026-07-10 13:32:39 | INFO | Validating stock_prices.xlsx
+2026-07-10 13:32:39 | INFO | Validating market_cap.xlsx
+2026-07-10 13:32:39 | INFO | Validating financial_ratios.xlsx
+2026-07-10 13:32:39 | INFO | Validating peer_groups.xlsx
+2026-07-10 13:32:39 | SUCCESS | Validation report saved successfully.
+2026-07-10 13:37:33 | INFO | Loading companies.xlsx
+2026-07-10 13:37:34 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:37:34 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:37:34 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:37:34 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:37:34 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:37:34 | INFO | Loading cashflow.xlsx
+2026-07-10 13:37:34 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:37:34 | INFO | Loading analysis.xlsx
+2026-07-10 13:37:34 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:37:34 | INFO | Loading documents.xlsx
+2026-07-10 13:37:34 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:37:34 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:37:34 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:37:34 | INFO | Loading sectors.xlsx
+2026-07-10 13:37:34 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:37:34 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:37:35 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:37:35 | INFO | Loading market_cap.xlsx
+2026-07-10 13:37:35 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:37:35 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:37:35 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:37:35 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:37:35 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:37:35 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:37:35 | INFO | Starting Data Quality Validation...
+2026-07-10 13:37:35 | INFO | Validating companies.xlsx
+2026-07-10 13:37:35 | INFO | Validating profitandloss.xlsx
+2026-07-10 13:37:35 | INFO | Validating balancesheet.xlsx
+2026-07-10 13:37:35 | INFO | Validating cashflow.xlsx
+2026-07-10 13:37:35 | INFO | Validating analysis.xlsx
+2026-07-10 13:37:35 | INFO | Validating documents.xlsx
+2026-07-10 13:37:35 | INFO | Validating prosandcons.xlsx
+2026-07-10 13:37:35 | INFO | Validating sectors.xlsx
+2026-07-10 13:37:35 | INFO | Validating stock_prices.xlsx
+2026-07-10 13:37:35 | INFO | Validating market_cap.xlsx
+2026-07-10 13:37:35 | INFO | Validating financial_ratios.xlsx
+2026-07-10 13:37:35 | INFO | Validating peer_groups.xlsx
+2026-07-10 13:37:35 | SUCCESS | Validation report saved successfully.
+2026-07-10 13:43:00 | INFO | Loading companies.xlsx
+2026-07-10 13:43:01 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-10 13:43:01 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:43:01 | SUCCESS | profitandloss.xlsx Loaded Rows=1276 Columns=15
+2026-07-10 13:43:01 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:43:01 | SUCCESS | balancesheet.xlsx Loaded Rows=1312 Columns=13
+2026-07-10 13:43:01 | INFO | Loading cashflow.xlsx
+2026-07-10 13:43:01 | SUCCESS | cashflow.xlsx Loaded Rows=1187 Columns=7
+2026-07-10 13:43:01 | INFO | Loading analysis.xlsx
+2026-07-10 13:43:01 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-10 13:43:01 | INFO | Loading documents.xlsx
+2026-07-10 13:43:02 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=4
+2026-07-10 13:43:02 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:43:02 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-10 13:43:02 | INFO | Loading sectors.xlsx
+2026-07-10 13:43:02 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-10 13:43:02 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:43:03 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-10 13:43:03 | INFO | Loading market_cap.xlsx
+2026-07-10 13:43:03 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=9
+2026-07-10 13:43:03 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:43:03 | SUCCESS | financial_ratios.xlsx Loaded Rows=1184 Columns=16
+2026-07-10 13:43:03 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:43:03 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-10 13:43:03 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:43:03 | INFO | Starting Data Quality Validation...
+2026-07-10 13:43:03 | INFO | Validating companies.xlsx
+2026-07-10 13:43:03 | INFO | Validating profitandloss.xlsx
+2026-07-10 13:43:03 | INFO | Validating balancesheet.xlsx
+2026-07-10 13:43:03 | INFO | Validating cashflow.xlsx
+2026-07-10 13:43:03 | INFO | Validating analysis.xlsx
+2026-07-10 13:43:03 | INFO | Validating documents.xlsx
+2026-07-10 13:43:03 | INFO | Validating prosandcons.xlsx
+2026-07-10 13:43:03 | INFO | Validating sectors.xlsx
+2026-07-10 13:43:03 | INFO | Validating stock_prices.xlsx
+2026-07-10 13:43:03 | INFO | Validating market_cap.xlsx
+2026-07-10 13:43:03 | INFO | Validating financial_ratios.xlsx
+2026-07-10 13:43:03 | INFO | Validating peer_groups.xlsx
+2026-07-10 13:43:03 | SUCCESS | Validation report saved successfully.
+2026-07-10 13:49:05 | INFO | Loading companies.xlsx
+2026-07-10 13:49:05 | ERROR | companies.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:05 | INFO | Loading profitandloss.xlsx
+2026-07-10 13:49:06 | ERROR | profitandloss.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:06 | INFO | Loading balancesheet.xlsx
+2026-07-10 13:49:06 | ERROR | balancesheet.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:06 | INFO | Loading cashflow.xlsx
+2026-07-10 13:49:06 | ERROR | cashflow.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:06 | INFO | Loading analysis.xlsx
+2026-07-10 13:49:06 | ERROR | analysis.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:06 | INFO | Loading documents.xlsx
+2026-07-10 13:49:06 | ERROR | documents.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:06 | INFO | Loading prosandcons.xlsx
+2026-07-10 13:49:06 | ERROR | prosandcons.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:06 | INFO | Loading sectors.xlsx
+2026-07-10 13:49:06 | ERROR | sectors.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:06 | INFO | Loading stock_prices.xlsx
+2026-07-10 13:49:07 | ERROR | stock_prices.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:07 | INFO | Loading market_cap.xlsx
+2026-07-10 13:49:07 | ERROR | market_cap.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:07 | INFO | Loading financial_ratios.xlsx
+2026-07-10 13:49:07 | ERROR | financial_ratios.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:07 | INFO | Loading peer_groups.xlsx
+2026-07-10 13:49:07 | ERROR | peer_groups.xlsx : The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-07-10 13:49:07 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-10 13:49:07 | INFO | Starting Data Quality Validation...
