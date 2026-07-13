@@ -69,12 +69,37 @@ The Sprint 1 foundation includes:
 | Metric | Result |
 |---|---:|
 | Total validation checks | 92 |
-| Passed | 71 |
-| Failed | 21 |
-| Critical rule failures | 16 |
+| Passed | 73 |
+| Failed | 19 |
+| Critical rule failures | 14 |
 | Warning rule failures | 5 |
 
 > The failure count represents failed validation checks, not necessarily the total number of invalid records. Detailed row-level findings are recorded in the validation output and diagnostic results.
+
+## Known Data Quality Issues
+
+The Sprint 1 Day 3 validation process identified several unresolved
+source-level data-quality issues.
+
+The remaining issues include:
+
+- 176 conflicting balance-sheet records
+- 22 conflicting cash-flow records
+- 22 conflicting financial-ratio records
+- Missing company references in the company master dataset
+- Missing values in selected financial fields
+- 99 non-annual or TTM profit-and-loss records without a normalized year
+
+Exact duplicate records were removed automatically. However, records
+containing conflicting financial values were intentionally preserved
+to prevent accidental loss or corruption of source data.
+
+These issues have been documented in the generated audit reports and
+will be addressed during a future data-remediation iteration.
+
+The unresolved records do not block the continuation of Sprint 1
+because the ETL pipeline successfully loads, normalizes, validates,
+audits, and reports all datasets.
 
 ## Current Data-Quality Findings
 
@@ -84,6 +109,32 @@ The Sprint 1 foundation includes:
 - 308 balance-sheet rows participate in duplicate `(company_id, year)` keys.
 - 58 cash-flow rows participate in duplicate `(company_id, year)` keys.
 - Several company identifiers in dependent datasets are absent from the company master dataset.
+
+## Sprint 1 — Day 4: Processed Data Export
+
+Sprint 1 Day 4 focused on building a structured processed-data
+layer for the N100 Financial Intelligence Platform.
+
+### Implemented Features
+
+- Created a reusable processed-data exporter
+- Exported normalized datasets from DataFrames to CSV
+- Generated 12 processed dataset files
+- Added automatic post-export row-count verification
+- Added export exception handling and status tracking
+- Recorded row counts, column counts, file sizes, and export duration
+- Generated a centralized processed-data manifest
+- Preserved unresolved financial conflicts for future reconciliation
+- Protected the original raw Excel datasets from modification
+
+### Processed Data Location
+
+```text
+data/processed/
+
+Generated Manifest
+
+output/processed_data_manifest.csv
 
 ## Project Structure
 

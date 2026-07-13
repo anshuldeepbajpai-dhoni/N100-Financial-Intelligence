@@ -40,67 +40,355 @@ class DataNormalizer:
     @staticmethod
     def normalize_year(value):
         """
-        Normalize financial-year values.
+        Convert financial-period labels into integer years.
 
         Examples:
-        2024        -> 2024
-        2024.0      -> 2024
-        "2023-24"   -> 2024
-        "Mar 2024"  -> 2024
-        "FY24"      -> 2024
-
-        Missing or invalid values remain None.
+        Mar 2024      -> 2024
+        Dec 2012      -> 2012
+        Mar-24        -> 2024
+        Mar 2023 15   -> 2023
+        Mar 2016 9m   -> 2016
+        FY24          -> 2024
+        FY2024        -> 2024
+        2023-24       -> 2024
+        TTM           -> NA
         """
 
         if pd.isna(value):
-            return None
+            return pd.NA
 
-        value = str(value).strip()
+        # ---------------------------------------------
+        # Existing numeric values
+        # ---------------------------------------------
 
-        if value == "":
-            return None
+        if isinstance(value, (int, float)):
 
-        # Normal four-digit year
-        match = re.search(
-            r"\b(19\d{2}|20\d{2})\b",
-            value
+            year = int(value)
+
+            return year
+
+        # ---------------------------------------------
+        # Clean string
+        # ---------------------------------------------
+
+        text = str(value).strip()
+
+        if not text:
+            return pd.NA
+
+        # ---------------------------------------------
+        # Non-annual financial periods
+        # ---------------------------------------------
+
+        if text.upper() in {
+            "TTM",
+            "LTM",
+            "N/A",
+            "NA",
+            "NONE",
+            "NAN"
+        }:
+            return pd.NA
+
+        # ---------------------------------------------
+        # Find a four-digit year anywhere
+        #
+        # Mar 2024      -> 2024
+        # Dec 2012      -> 2012
+        # Mar 2023 15   -> 2023
+        # Mar 2016 9m   -> 2016
+        # ---------------------------------------------
+
+        four_digit_year = re.search(
+            r"\b(19\d{2}|20\d{2}|21\d{2})\b",
+            text
         )
 
-        if match:
-            return int(match.group(1))
+        if four_digit_year:
 
-        # FY24, FY25, etc.
-        match = re.search(
-            r"FY\s*(\d{2})",
-            value,
-            re.IGNORECASE
+            return int(
+                four_digit_year.group(1)
+            )
+
+        # ---------------------------------------------
+        # Month-short-year format
+        #
+        # Mar-24 -> 2024
+        # Dec-13 -> 2013
+        # ---------------------------------------------
+
+        month_short_year = re.search(
+            r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|"
+            r"Sep|Oct|Nov|Dec)"
+            r"[\s\-/]+(\d{2})\b",
+            text,
+            flags=re.IGNORECASE
         )
 
-        if match:
+        if month_short_year:
 
             short_year = int(
-                match.group(1)
+                month_short_year.group(1)
             )
 
-            return (
-                2000 + short_year
-                if short_year < 50
-                else 1900 + short_year
+            if short_year <= 50:
+                return 2000 + short_year
+
+            return 1900 + short_year
+
+        # ---------------------------------------------
+        # FY short-year format
+        #
+        # FY24 -> 2024
+        # ---------------------------------------------
+
+        fy_short_year = re.search(
+            r"\bFY[\s\-/]*(\d{2})\b",
+            text,
+            flags=re.IGNORECASE
+        )
+
+        if fy_short_year:
+
+            short_year = int(
+                fy_short_year.group(1)
             )
 
-        return None
+            if short_year <= 50:
+                return 2000 + short_year
+
+            return 1900 + short_year
+
+        # ---------------------------------------------
+        # Unrecognized values remain missing
+        # ---------------------------------------------
+
+        return pd.NA
 
     @staticmethod
-    def remove_duplicates(df):
+    def remove_exact_duplicates(df):
+        """
+        Remove exact duplicate records while ignoring
+        the artificial row ID.
 
-        return df.drop_duplicates()
+        Records with the same company_id and year but
+        different financial values are preserved.
+        """
+
+        if df is None or df.empty:
+
+            return df
+
+        # Compare all columns except artificial ID
+        comparison_columns = [
+            column
+            for column in df.columns
+            if column != "id"
+        ]
+
+        if not comparison_columns:
+
+            return df
+
+        rows_before = len(df)
+
+        # Keep the first occurrence of an exact record
+        df = df.drop_duplicates(
+            subset=comparison_columns,
+            keep="first"
+        ).copy()
+
+        rows_removed = (
+            rows_before - len(df)
+        )
+
+        return df
+    
+
+    @staticmethod
+    def normalize_reporting_period(value):
+        """
+        Standardize source financial-period labels.
+
+        Examples:
+        Mar-24       -> MAR-2024
+        Mar 2024     -> MAR-2024
+        Dec 2012     -> DEC-2012
+        Sep 2024     -> SEP-2024
+        TTM          -> TTM
+        """
+
+        if pd.isna(value):
+
+            return pd.NA
+
+        text = str(value).strip()
+
+        if not text:
+
+            return pd.NA
+
+        if text.upper() in {
+            "TTM",
+            "LTM"
+        }:
+
+            return text.upper()
+
+        month_match = re.search(
+            r"\b"
+            r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|"
+            r"Sep|Oct|Nov|Dec)"
+            r"[\s\-/]+"
+            r"(\d{2}|\d{4})"
+            r"\b",
+            text,
+            flags=re.IGNORECASE
+        )
+
+        if month_match:
+
+            month = (
+                month_match
+                .group(1)
+                .upper()
+            )
+
+            year = int(
+                month_match.group(2)
+            )
+
+            if year < 100:
+
+                if year <= 50:
+
+                    year = 2000 + year
+
+                else:
+
+                    year = 1900 + year
+
+            return f"{month}-{year}"
+
+        return text.upper()
+
 
     @staticmethod
     def clean(df):
 
-        df = DataNormalizer.normalize_columns(df)
-        df = DataNormalizer.normalize_company_id(df)
-        df = DataNormalizer.normalize_year(df)
-        df = DataNormalizer.remove_duplicates(df)
+        if df is None:
+
+            return pd.DataFrame()
+
+        df = df.copy()
+
+        # --------------------------------------------------
+        # Clean Column Names
+        # --------------------------------------------------
+
+        df.columns = (
+            df.columns
+            .astype(str)
+            .str.strip()
+            .str.lower()
+            .str.replace(
+                " ",
+                "_",
+                regex=False
+            )
+            .str.replace(
+                "-",
+                "_",
+                regex=False
+            )
+        )
+
+        # --------------------------------------------------
+        # Remove Completely Empty Rows
+        # --------------------------------------------------
+
+        df = df.dropna(
+            how="all"
+        )
+
+        # --------------------------------------------------
+        # Normalize Company ID
+        # --------------------------------------------------
+
+        if "company_id" in df.columns:
+
+            df["company_id"] = (
+                df["company_id"]
+                .astype("string")
+                .str.strip()
+                .str.upper()
+            )
+
+        # --------------------------------------------------
+        # Preserve Original Financial Period
+        # --------------------------------------------------
+
+        if "year" in df.columns:
+
+            # Preserve the original source period before
+            # extracting the normalized financial year.
+            df["reporting_period"] = (
+                df["year"]
+                .astype("string")
+                .str.strip()
+            )
+
+            # Extract normalized integer year.
+            df["year"] = (
+                df["year"]
+                .apply(
+                    DataNormalizer.normalize_year
+                )
+                .astype("Int64")
+            )
+
+        # --------------------------------------------------
+        # Normalize Financial Period and Year
+        # --------------------------------------------------
+
+        if "year" in df.columns:
+
+            original_year = (
+                df["year"]
+                .copy()
+            )
+
+            df["reporting_period"] = (
+                original_year
+                .apply(
+                    DataNormalizer
+                    .normalize_reporting_period
+                )
+                .astype("string")
+            )
+
+            df["year"] = (
+                original_year
+                .apply(
+                    DataNormalizer.normalize_year
+                )
+                .astype("Int64")
+            )
+
+        # --------------------------------------------------
+        # Remove Exact Duplicate Records
+        # --------------------------------------------------
+
+        df = DataNormalizer.remove_exact_duplicates(
+            df
+        )
+
+        # --------------------------------------------------
+        # Reset Index
+        # --------------------------------------------------
+
+        df = df.reset_index(
+            drop=True
+        )
 
         return df

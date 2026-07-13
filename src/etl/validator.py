@@ -339,21 +339,24 @@ class DataValidator:
                 len(failed)
             )
 
-        # -------------------------------------------------------
+    # -------------------------------------------------------
     # Validate All Datasets
     # -------------------------------------------------------
 
     def validate_all(self, datasets):
         """
-        Execute all validation rules for every dataset and
-        generate validation report.
+        Execute configured validation rules for all datasets
+        and generate the validation report.
         """
 
-        logger.info("Starting Data Quality Validation...")
+        logger.info(
+            "Starting Data Quality Validation..."
+        )
 
+        # Clear results from any previous execution
         self.results = []
 
-        # Validate every dataset
+        # Validate every loaded dataset
         for dataset_name, df in datasets.items():
 
             self.validate_dataset(
@@ -362,17 +365,47 @@ class DataValidator:
                 datasets=datasets
             )
 
-        # ----------------------------
-        # Create Report
-        # ----------------------------
+        # Create report from validation results
+        report = pd.DataFrame(
+            self.results,
+            columns=[
+                "dataset",
+                "rule",
+                "severity",
+                "failures"
+            ]
+        )
 
-        report = pd.DataFrame(self.results)
+        # Prevent sorting errors if no rules execute
+        if report.empty:
 
+            logger.warning(
+                "No validation results were generated."
+            )
+
+            report.to_csv(
+                OUTPUT_DIR / "validation_failures.csv",
+                index=False
+            )
+
+            return report
+
+        # Sort validation results
         report.sort_values(
-            by=["dataset", "rule"],
+            by=[
+                "dataset",
+                "rule"
+            ],
             inplace=True
         )
 
+        # Reset index after sorting
+        report.reset_index(
+            drop=True,
+            inplace=True
+        )
+
+        # Save validation report
         report.to_csv(
             OUTPUT_DIR / "validation_failures.csv",
             index=False

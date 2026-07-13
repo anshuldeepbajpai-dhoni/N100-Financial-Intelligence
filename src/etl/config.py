@@ -28,6 +28,11 @@ LOG_DIR = PROJECT_ROOT / "logs"
 OUTPUT_DIR.mkdir(exist_ok=True)
 LOG_DIR.mkdir(exist_ok=True)
 
+PROCESSED_DATA.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
 # ==============================
 # Core Datasets
 # ==============================
