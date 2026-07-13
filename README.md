@@ -110,7 +110,7 @@ audits, and reports all datasets.
 - 58 cash-flow rows participate in duplicate `(company_id, year)` keys.
 - Several company identifiers in dependent datasets are absent from the company master dataset.
 
-## Sprint 1 — Day 4: Processed Data Export
+Day 4: Processed Data Export
 
 Sprint 1 Day 4 focused on building a structured processed-data
 layer for the N100 Financial Intelligence Platform.
