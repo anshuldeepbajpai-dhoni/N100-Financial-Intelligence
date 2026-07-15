@@ -64,3 +64,19 @@ SUPPLEMENTARY_DATASETS = [
 # ==============================
 
 ALL_DATASETS = CORE_DATASETS + SUPPLEMENTARY_DATASETS
+
+# ==========================================================
+# DATABASE CONFIGURATION
+# ==========================================================
+
+DATABASE_DIR = PROJECT_ROOT / "database"
+
+DATABASE_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+DATABASE_PATH = (
+    DATABASE_DIR
+    / "n100_financial.db"
+)

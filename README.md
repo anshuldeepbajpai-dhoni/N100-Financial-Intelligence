@@ -1,83 +1,80 @@
 # N100 Financial Intelligence Platform
 
-A financial data engineering and analytics platform designed to ingest, normalize, validate, store, analyze, and visualize NIFTY 100 company data.
+## Sprint 1 — Data Foundation
 
-## Project Status
+The **N100 Financial Intelligence Platform** is a modular financial data-engineering and analytics system designed to transform raw company, financial-statement, market, sector, and fundamental datasets into a validated, standardized, database-driven, and analytics-ready intelligence layer.
 
-- Project Start Date: 05 July 2026
-- Current Sprint: Sprint 1 — Data Foundation
-- Current Stage: Day 3 — Data Quality Validation
-- Status: Active
+Sprint 1 implements the complete data foundation, including data loading, normalization, validation, processed-data export, SQLite integration, database optimization, analytical SQL views, financial queries, and automated audit reporting.
 
-## Sprint 1 Goal
+---
 
-Build a fully loaded and validated SQLite database containing all required financial tables from the source datasets.
+## Sprint Status
 
-The Sprint 1 foundation includes:
+| Day | Module | Status |
+|---|---|---|
+| Day 1 | Project Foundation and Dataset Configuration | Completed |
+| Day 2 | ETL Loader and Load Audit | Completed |
+| Day 3 | Data Normalization and Quality Validation | Completed |
+| Day 4 | Processed Data Export | Completed |
+| Day 5 | SQLite Database Integration | Completed |
+| Day 6 | Database Integrity, Indexes and SQL Views | Completed |
+| Day 7 | Financial Analytics and Final Integration | Completed |
 
-- Excel data ingestion
-- Data normalization
-- Schema validation
-- DQ-01 to DQ-16
-- Load auditing
-- SQLite schema creation
-- Full data loading
-- Manual quality review
-- Exploratory SQL queries
+**Overall Sprint 1 Status: Completed Successfully**
 
-## Completed Work
+---
 
-### Day 1 — Environment Setup
+## Features
 
-- Created the project directory structure
-- Created and activated a Python virtual environment
-- Installed project dependencies
-- Configured environment files
-- Created Makefile targets
-- Initialized Git
-- Created the GitHub repository
-- Committed and pushed the project structure
+- Automated Excel dataset loading
+- Centralized dataset configuration
+- Column-name normalization
+- Company-identifier normalization
+- Financial-year normalization
+- Data-quality validation
+- Missing-value detection
+- Invalid-year detection
+- Duplicate classification
+- Conflicting-record analysis
+- Safe data cleaning
+- Processed CSV export
+- SQLite database creation
+- Automated database loading
+- Database-integrity validation
+- Database table summaries
+- Database index optimization
+- Analytical SQL views
+- Secure read-only SQL execution
+- Predefined financial analytics
+- Automated analytics CSV exports
+- Query execution auditing
+- Export manifest generation
+- Modular pipeline architecture
 
-### Day 2 — Excel Loader and Normalization
+---
 
-- Implemented a reusable Excel loader
-- Added support for core and supplementary datasets
-- Implemented data normalization
-- Added column-name standardization
-- Added year normalization
-- Added ticker normalization
-- Added structured logging
-- Loaded all 12 source files
-- Generated `output/load_audit.csv`
+## Dataset Coverage
 
-### Day 3 — Schema Validator and Data Quality
+### Core Datasets
 
-- Implemented Validator V2
-- Added configuration-driven validation
-- Implemented DQ-01 through DQ-16
-- Added dataset-specific mandatory fields
-- Added configured numeric-column validation
-- Added accounting-rule tolerances
-- Added severity classification
-- Added validation statistics
-- Generated `output/validation_failures.csv`
-- Calibrated validation rules to reduce false positives
-- Performed diagnostics for invalid years and duplicate keys
+- `companies.xlsx`
+- `profitandloss.xlsx`
+- `balancesheet.xlsx`
+- `cashflow.xlsx`
+- `analysis.xlsx`
+- `documents.xlsx`
+- `prosandcons.xlsx`
 
-## Latest Validation Results
+### Supplementary Datasets
 
-| Metric | Result |
-|---|---:|
-| Total validation checks | 92 |
-| Passed | 73 |
-| Failed | 19 |
-| Critical rule failures | 14 |
-| Warning rule failures | 5 |
+- `sectors.xlsx`
+- `stock_prices.xlsx`
+- `market_cap.xlsx`
+- `financial_ratios.xlsx`
+- `peer_groups.xlsx`
 
-> The failure count represents failed validation checks, not necessarily the total number of invalid records. Detailed row-level findings are recorded in the validation output and diagnostic results.
 
 ## Known Data Quality Issues
-
 The Sprint 1 Day 3 validation process identified several unresolved
 source-level data-quality issues.
 
@@ -137,103 +134,156 @@ Generated Manifest
 output/processed_data_manifest.csv
 
 ## Project Structure
+=======
+## System Architecture
+>>>>>>> 8ff276d (Complete Sprint 1 data foundation and financial analytics pipeline)
 
 ```text
+Raw Excel Datasets
+        ↓
+Excel ETL Loader
+        ↓
+Data Normalization
+        ↓
+Data-Quality Validation
+        ↓
+Safe Data Cleaning
+        ↓
+Processed CSV Export
+        ↓
+SQLite Database
+        ↓
+Database Integrity Validation
+        ↓
+Database Index Optimization
+        ↓
+Analytical SQL Views
+        ↓
+Financial Analytics Queries
+        ↓
+Analytics CSV Exports
+        ↓
+Audit Reports and Manifests
+Project Structure
 N100-Financial-Intelligence/
 │
 ├── data/
 │   ├── raw/
-│   └── supplementary/
+│   └── processed/
 │
-├── db/
-│   └── schema.sql
+├── database/
+│   └── n100_financial.db
 │
-├── notebooks/
+├── docs/
 │
 ├── output/
+│   ├── analytics/
 │   ├── load_audit.csv
-│   └── validation_failures.csv
+│   ├── validation_failures.csv
+│   ├── processed_data_manifest.csv
+│   ├── database_load_audit.csv
+│   ├── database_integrity_report.csv
+│   ├── database_table_summary.csv
+│   ├── database_index_audit.csv
+│   ├── sql_view_validation.csv
+│   ├── analytical_query_audit.csv
+│   └── analytics_export_manifest.csv
 │
 ├── src/
+│   ├── analytics/
+│   │   ├── __init__.py
+│   │   ├── query_engine.py
+│   │   ├── financial_queries.py
+│   │   └── analytics_runner.py
+│   │
+│   ├── database/
+│   │   ├── connection.py
+│   │   ├── database_loader.py
+│   │   ├── integrity_checker.py
+│   │   ├── indexes.py
+│   │   └── views.py
+│   │
 │   └── etl/
 │       ├── config.py
 │       ├── loader.py
-│       ├── logger.py
 │       ├── normalizer.py
-│       ├── validation_config.py
-│       ├── validation_rules.py
-│       └── validator.py
-│
-├── tests/
-│   └── etl/
+│       ├── validator.py
+│       ├── exporter.py
+│       └── logger.py
 │
 ├── main.py
-├── Makefile
 ├── requirements.txt
 └── README.md
+Financial-Year Normalization
 
-Data Quality Framework
-Rule	Description
-DQ-01	Primary-key uniqueness
-DQ-02	Composite-key uniqueness
-DQ-03	Foreign-key integrity
-DQ-04	Duplicate-row detection
-DQ-05	Mandatory-field validation
-DQ-06	Positive-sales validation
-DQ-07	OPM cross-check
-DQ-08	Balance-sheet consistency
-DQ-09	Net-cash-flow reconciliation
-DQ-10	Tax-rate validation
-DQ-11	Dividend-payout validation
-DQ-12	EPS-sign consistency
-DQ-13	URL-format validation
-DQ-14	Financial-year validation
-DQ-15	Numeric-field validation
-DQ-16	Company-coverage validation
-Generated Outputs
-Load Audit
-output/load_audit.csv
+The normalization system converts financial-period labels into standardized integer years.
 
-Contains:
+Source Value	Normalized Value
+Mar 2024	2024
+Dec 2012	2012
+Mar-24	2024
+FY24	2024
+FY2024	2024
+Mar 2023 15	2023
+Mar 2016 9m	2016
+TTM	Missing
+Financial Analytics
 
-dataset name,
-loaded row count,
-column count,
-loading status,
-execution time.
-Validation Report
-output/validation_failures.csv
+The analytical layer executes the following queries:
 
-Contains:
-
-dataset,
-validation rule,
-severity,
-failure count.
-Run the Pipeline
-
-Activate the virtual environment:
-
-.venv\Scripts\Activate.ps1
-
-Run the ETL and validation pipeline:
-
+Top companies by market capitalization
+Highest ROE companies
+Highest ROCE companies
+Latest profitability ranking
+Highest operating-margin companies
+Annual profitability trends
+Balance-sheet leverage
+Cash-flow performance
+Sector-wise company distribution
+Complete company financial snapshot
+Analytics Result
+Total Queries      : 10
+Successful Queries : 10
+Failed Queries     : 0
+Run the Project
+Create a virtual environment
+python -m venv .venv
+Activate the environment
+.venv\Scripts\activate
+Install dependencies
+pip install -r requirements.txt
+Execute the pipeline
 python main.py
-Next Steps
-Classify duplicate composite-key records.
-Remove only verified exact duplicates.
-Investigate missing P&L financial years.
-Correct invalid TCS cash-flow years.
-Reconcile missing company identifiers with the master dataset.
-Re-run all validation rules.
-Resolve remaining critical failures.
-Begin Day 4 SQLite database schema implementation.
-Sprint Progress
-Day	Task	Status
-Day 1	Environment Setup	Completed
-Day 2	Excel Loader and Normalization	Completed
-Day 3	Schema Validator and DQ Rules	In progress — remediation pending
-Day 4	SQLite Database Schema	Not started
-Day 5	Full Data Load	Not started
-Day 6	Manual Data Review	Not started
-Day 7	Sprint Review and Wrap-Up	Not started
+Technology Stack
+Python
+Pandas
+OpenPyXL
+SQLite
+SQL
+Loguru
+Pathlib
+Git
+GitHub
+Sprint 1 Outcome
+
+Sprint 1 successfully created an automated financial-data foundation capable of:
+
+loading source financial datasets;
+normalizing inconsistent data;
+validating data quality;
+preserving conflicting source records;
+exporting standardized datasets;
+creating an optimized SQLite database;
+generating analytical SQL views;
+executing financial analytics;
+exporting query results;
+generating audit reports and manifests.
+
+The platform is ready for future dashboard development, financial scoring, forecasting, company comparisons, APIs, and machine-learning applications.
+
+Author
+
+Anshul Deep Bajpai
+
+N100 Financial Intelligence Platform
+Sprint 1 — Data Foundation

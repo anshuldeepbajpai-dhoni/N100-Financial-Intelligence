@@ -1,3 +1,7 @@
+from pathlib import Path
+
+import pandas as pd
+
 from src.etl.loader import ExcelLoader
 from src.etl.validator import DataValidator
 from src.etl.exporter import ProcessedDataExporter
@@ -7,43 +11,153 @@ from src.etl.config import (
     OUTPUT_DIR
 )
 
+from src.database.database_loader import (
+    DatabaseLoader
+)
+
+from src.database.integrity_checker import (
+    DatabaseIntegrityChecker
+)
+
+from src.database.indexes import (
+    DatabaseIndexManager
+)
+
+from src.database.views import (
+    AnalyticalViewManager
+)
+from src.analytics.analytics_runner import (
+    FinancialAnalyticsRunner
+)
+
 
 # ==========================================================
-# REUSABLE PRINT SECTION
+# APPLICATION CONSTANTS
+# ==========================================================
+
+SEPARATOR_LENGTH = 80
+
+
+# ==========================================================
+# CONSOLE HELPERS
 # ==========================================================
 
 def print_section(title):
 
-    print("\n" + "=" * 80)
+    print(
+        "\n"
+        + "=" * SEPARATOR_LENGTH
+    )
 
     print(title)
 
-    print("=" * 80)
-
-
-# ==========================================================
-# MAIN APPLICATION
-# ==========================================================
-
-def main():
-
-    # ------------------------------------------------------
-    # Application Header
-    # ------------------------------------------------------
-
-    print_section(
-        "N100 FINANCIAL INTELLIGENCE PLATFORM\n"
-        "SPRINT 1 — DAY 4\n"
-        "PROCESSED DATA EXPORT AND DATA MANIFEST"
+    print(
+        "=" * SEPARATOR_LENGTH
     )
 
 
-    # ======================================================
-    # STEP 1 — LOAD DATASETS
-    # ======================================================
+def print_separator():
+
+    print(
+        "-" * SEPARATOR_LENGTH
+    )
+
+
+def print_metric(
+    label,
+    value,
+    width=27
+):
+
+    print(
+        f"{label:<{width}}: "
+        f"{value}"
+    )
+
+
+def print_report_status(
+    report_paths
+):
+
+    for report_path in report_paths:
+
+        path = Path(
+            report_path
+        )
+
+        if path.exists():
+
+            print(
+                f"✓ {path}"
+            )
+
+        else:
+
+            print(
+                f"✗ Missing: {path}"
+            )
+
+
+# ==========================================================
+# AUDIT HELPERS
+# ==========================================================
+
+def count_successful_rows(
+    audit_rows
+):
+
+    return sum(
+
+        1
+
+        for row in audit_rows
+
+        if str(
+            row.get(
+                "status",
+                ""
+            )
+        ).upper() == "SUCCESS"
+
+    )
+
+
+def print_dataset_audit(
+    audit_rows
+):
+
+    if not audit_rows:
+
+        print(
+            "No audit records generated."
+        )
+
+        return
+
+
+    for row in audit_rows:
+
+        print(
+
+            f"{row['dataset']:<28}"
+
+            f"{row['rows']:>8} rows"
+
+            f"{row['columns']:>8} cols"
+
+            f"   {row['status']}"
+
+        )
+
+
+# ==========================================================
+# STEP 1 — LOAD SOURCE DATASETS
+# ==========================================================
+
+def run_dataset_loading():
 
     print_section(
-        "STEP 1 — DATASET LOADING"
+        "STEP 1 — SOURCE DATASET LOADING"
     )
 
 
@@ -55,263 +169,455 @@ def main():
     )
 
 
-    # ======================================================
-    # STEP 2 — LOAD AUDIT
-    # ======================================================
-
     print_section(
-        "LOAD AUDIT"
+        "SOURCE LOAD AUDIT"
     )
 
 
-    for row in loader.audit:
+    print_dataset_audit(
+        loader.audit
+    )
 
-        print(
 
-            f"{row['dataset']:<28}"
-
-            f"{row['rows']:>7} rows"
-
-            f"{row['columns']:>7} cols"
-
-            f"   {row['status']}"
-
+    successful_loads = (
+        count_successful_rows(
+            loader.audit
         )
-
-
-    successful_loads = sum(
-
-        1
-
-        for row in loader.audit
-
-        if row["status"].upper()
-        == "SUCCESS"
-
     )
 
 
     failed_loads = (
 
-        len(loader.audit)
+        len(
+            loader.audit
+        )
 
         - successful_loads
 
     )
 
 
-    print("-" * 80)
+    print_separator()
 
-    print(
 
-        f"Successfully loaded : "
-        f"{successful_loads}"
-
-    )
-
-    print(
-
-        f"Failed to load      : "
-        f"{failed_loads}"
-
-    )
-
-    print(
-
-        f"Datasets available  : "
-        f"{len(datasets)}"
-
+    print_metric(
+        "Configured datasets",
+        len(ALL_DATASETS)
     )
 
 
-    print("\nLoad audit generated successfully.")
+    print_metric(
+        "Successfully loaded",
+        successful_loads
+    )
+
+
+    print_metric(
+        "Failed loads",
+        failed_loads
+    )
+
+
+    print_metric(
+        "Datasets available",
+        len(datasets)
+    )
+
 
     print(
 
-        "Location: "
-
+        "\nLoad audit: "
         f"{OUTPUT_DIR / 'load_audit.csv'}"
 
     )
 
 
-    # ------------------------------------------------------
-    # Stop pipeline if no dataset was loaded
-    # ------------------------------------------------------
+    return (
 
-    if not datasets:
+        datasets,
 
-        print_section(
-            "PIPELINE TERMINATED"
-        )
+        loader,
 
-        print(
+        successful_loads,
 
-            "No datasets were loaded. "
-            "Processed-data export cannot continue."
+        failed_loads
 
-        )
-
-        return
+    )
 
 
-    # ======================================================
-    # STEP 3 — DATA QUALITY VALIDATION
-    # ======================================================
+# ==========================================================
+# STEP 2 — DATA-QUALITY VALIDATION
+# ==========================================================
+
+def run_data_validation(
+    datasets
+):
 
     print_section(
-        "STEP 2 — DATA QUALITY VALIDATION"
+        "STEP 2 — DATA-QUALITY VALIDATION"
     )
 
 
     validator = DataValidator()
 
 
-    report = validator.validate_all(
-        datasets
-    )
+    validation_report = (
 
-
-    # ======================================================
-    # STEP 4 — PROCESSED DATA EXPORT
-    # ======================================================
-
-    print_section(
-        "STEP 3 — PROCESSED DATA EXPORT"
-    )
-
-
-    exporter = ProcessedDataExporter()
-
-
-    exported_files = exporter.export_all(
-        datasets
-    )
-
-
-    # ======================================================
-    # EXPORT AUDIT
-    # ======================================================
-
-    print_section(
-        "PROCESSED DATA EXPORT AUDIT"
-    )
-
-
-    for audit_row in exporter.export_audit:
-
-        print(
-
-            f"{audit_row['dataset']:<28}"
-
-            f"{audit_row['rows']:>7} rows"
-
-            f"{audit_row['columns']:>7} cols"
-
-            f"   {audit_row['status']}"
-
+        validator.validate_all(
+            datasets
         )
 
+    )
 
-    successful_exports = sum(
 
-        1
+    print_section(
+        "DATA-QUALITY VALIDATION SUMMARY"
+    )
 
-        for row in exporter.export_audit
 
-        if row["status"].upper()
-        == "SUCCESS"
+    validator.print_summary(
+        validation_report
+    )
+
+
+    return (
+
+        validator,
+
+        validation_report
+
+    )
+
+
+# ==========================================================
+# STEP 3 — PROCESSED-DATA EXPORT
+# ==========================================================
+
+def run_processed_export(
+    datasets
+):
+
+    print_section(
+        "STEP 3 — PROCESSED-DATA EXPORT"
+    )
+
+
+    exporter = (
+        ProcessedDataExporter()
+    )
+
+
+    exported_files = (
+
+        exporter.export_all(
+            datasets
+        )
+
+    )
+
+
+    print_section(
+        "PROCESSED-DATA EXPORT AUDIT"
+    )
+
+
+    print_dataset_audit(
+        exporter.export_audit
+    )
+
+
+    successful_exports = (
+
+        count_successful_rows(
+            exporter.export_audit
+        )
 
     )
 
 
     failed_exports = (
 
-        len(exporter.export_audit)
+        len(
+            exporter.export_audit
+        )
 
         - successful_exports
 
     )
 
 
-    print("-" * 80)
+    print_separator()
 
 
-    print(
+    print_metric(
+        "Successful exports",
+        successful_exports
+    )
 
-        f"Successful exports : "
-        f"{successful_exports}"
+
+    print_metric(
+        "Failed exports",
+        failed_exports
+    )
+
+
+    print_metric(
+
+        "Export completion",
+
+        (
+            f"{len(exported_files)}"
+            f"/{len(datasets)}"
+        )
 
     )
 
 
-    print(
+    return {
 
-        f"Failed exports     : "
-        f"{failed_exports}"
+        "exporter":
+        exporter,
 
-    )
+        "exported_files":
+        exported_files,
+
+        "successful_exports":
+        successful_exports,
+
+        "failed_exports":
+        failed_exports
+
+    }
 
 
-    print(
+# ==========================================================
+# STEP 4 — SQLITE DATABASE LOADING
+# ==========================================================
 
-        f"Export completion  : "
-        f"{len(exported_files)}"
-        f"/{len(datasets)} datasets"
-
-    )
-
-
-    # ======================================================
-    # STEP 5 — VALIDATION SUMMARY
-    # ======================================================
+def run_database_loading(
+    datasets
+):
 
     print_section(
-        "STEP 4 — FINAL DATA QUALITY RESULTS"
+        "STEP 4 — SQLITE DATABASE LOADING"
     )
 
 
-    validator.print_summary(
-        report
+    database_loader = (
+        DatabaseLoader()
     )
 
 
-    # ======================================================
-    # GENERATED FILES
-    # ======================================================
+    loaded_tables = (
+
+        database_loader.load_all(
+            datasets
+        )
+
+    )
+
 
     print_section(
-        "GENERATED OUTPUT REPORTS"
+        "DATABASE LOAD AUDIT"
     )
 
 
-    generated_reports = [
+    for row in (
 
-        "load_audit.csv",
+        database_loader.load_audit
 
-        "validation_failures.csv",
+    ):
 
-        "processed_data_manifest.csv"
+        print(
 
-    ]
+            f"{row['table_name']:<28}"
 
+            f"{row['source_rows']:>8} source"
 
-    for filename in generated_reports:
+            f"{row['database_rows']:>10} database"
 
-        file_path = (
-
-            OUTPUT_DIR
-
-            / filename
+            f"   {row['status']}"
 
         )
 
 
-        if file_path.exists():
+    successful_loads = (
+
+        count_successful_rows(
+
+            database_loader.load_audit
+
+        )
+
+    )
+
+
+    failed_loads = (
+
+        len(datasets)
+
+        - successful_loads
+
+    )
+
+
+    print_separator()
+
+
+    print_metric(
+        "Total datasets",
+        len(datasets)
+    )
+
+
+    print_metric(
+        "Successfully loaded",
+        successful_loads
+    )
+
+
+    print_metric(
+        "Failed database loads",
+        failed_loads
+    )
+
+
+    print_metric(
+        "SQLite tables created",
+        len(loaded_tables)
+    )
+
+
+    print(
+
+        "\nDatabase: "
+        "database/n100_financial.db"
+
+    )
+
+
+    print(
+
+        "Database audit: "
+        "output/database_load_audit.csv"
+
+    )
+
+
+    return {
+
+        "database_loader":
+        database_loader,
+
+        "loaded_tables":
+        loaded_tables,
+
+        "successful_loads":
+        successful_loads,
+
+        "failed_loads":
+        failed_loads
+
+    }
+
+
+# ==========================================================
+# STEP 5 — DATABASE INTEGRITY VALIDATION
+# ==========================================================
+
+def run_integrity_validation():
+
+    print_section(
+        "STEP 5 — DATABASE INTEGRITY VALIDATION"
+    )
+
+
+    checker = (
+        DatabaseIntegrityChecker()
+    )
+
+
+    (
+        integrity_report,
+
+        table_summary
+
+    ) = checker.validate_all()
+
+
+    print_section(
+        "DATABASE TABLE SUMMARY"
+    )
+
+
+    if table_summary.empty:
+
+        print(
+            "No database tables found."
+        )
+
+    else:
+
+        print(
+
+            table_summary.to_string(
+                index=False
+            )
+
+        )
+
+
+    print_section(
+        "DATABASE INTEGRITY SUMMARY"
+    )
+
+
+    if integrity_report.empty:
+
+        failed_report = (
+            pd.DataFrame()
+        )
+
+        total_checks = 0
+
+        passed_checks = 0
+
+        failed_checks = 0
+
+        critical_issues = 0
+
+        warnings = 0
+
+
+        print(
+
+            "No integrity results "
+            "were generated."
+
+        )
+
+
+    else:
+
+        failed_report = (
+
+            integrity_report[
+
+                integrity_report[
+                    "failures"
+                ] > 0
+
+            ]
+
+        )
+
+
+        if failed_report.empty:
 
             print(
 
-                f"✓ {file_path}"
+                "All database integrity "
+                "checks passed."
 
             )
 
@@ -319,42 +625,840 @@ def main():
 
             print(
 
-                f"✗ Not generated: "
-                f"{file_path}"
+                failed_report.to_string(
+                    index=False
+                )
 
             )
 
 
-    # ======================================================
-    # FINAL PIPELINE STATUS
-    # ======================================================
-
-    print_section(
-        "DAY 4 PIPELINE STATUS"
-    )
+        total_checks = len(
+            integrity_report
+        )
 
 
-    if (
+        passed_checks = int(
 
-        successful_exports
-        == len(datasets)
-
-        and
-
-        failed_exports == 0
-
-    ):
-
-        print(
-
-            "Status: SUCCESS"
+            (
+                integrity_report[
+                    "failures"
+                ] == 0
+            ).sum()
 
         )
 
+
+        failed_checks = int(
+
+            (
+                integrity_report[
+                    "failures"
+                ] > 0
+            ).sum()
+
+        )
+
+
+        critical_issues = int(
+
+            (
+
+                (
+                    integrity_report[
+                        "severity"
+                    ] == "CRITICAL"
+                )
+
+                &
+
+                (
+                    integrity_report[
+                        "failures"
+                    ] > 0
+                )
+
+            ).sum()
+
+        )
+
+
+        warnings = int(
+
+            (
+
+                (
+                    integrity_report[
+                        "severity"
+                    ] == "WARNING"
+                )
+
+                &
+
+                (
+                    integrity_report[
+                        "failures"
+                    ] > 0
+                )
+
+            ).sum()
+
+        )
+
+
+    print_separator()
+
+
+    print_metric(
+        "Total integrity checks",
+        total_checks
+    )
+
+
+    print_metric(
+        "Passed checks",
+        passed_checks
+    )
+
+
+    print_metric(
+        "Failed checks",
+        failed_checks
+    )
+
+
+    print_metric(
+        "Critical findings",
+        critical_issues
+    )
+
+
+    print_metric(
+        "Warnings",
+        warnings
+    )
+
+
+    return {
+
+        "checker":
+        checker,
+
+        "integrity_report":
+        integrity_report,
+
+        "table_summary":
+        table_summary,
+
+        "total_checks":
+        total_checks,
+
+        "passed_checks":
+        passed_checks,
+
+        "failed_checks":
+        failed_checks,
+
+        "critical_issues":
+        critical_issues,
+
+        "warnings":
+        warnings
+
+    }
+
+
+# ==========================================================
+# STEP 6 — DATABASE INDEX OPTIMIZATION
+# ==========================================================
+
+def run_index_optimization():
+
+    print_section(
+        "STEP 6 — DATABASE INDEX OPTIMIZATION"
+    )
+
+
+    index_manager = (
+        DatabaseIndexManager()
+    )
+
+
+    result = (
+
+        index_manager.create_all()
+
+    )
+
+
+    audit = result[
+        "audit_report"
+    ]
+
+
+    print_section(
+        "DATABASE INDEX AUDIT"
+    )
+
+
+    if audit.empty:
+
         print(
 
-            "All loaded datasets were exported "
-            "to the processed-data layer."
+            "No database index "
+            "results generated."
+
+        )
+
+    else:
+
+        print(
+
+            audit[
+
+                [
+
+                    "table_name",
+
+                    "index_name",
+
+                    "indexed_columns",
+
+                    "status"
+
+                ]
+
+            ].to_string(
+                index=False
+            )
+
+        )
+
+
+    print_separator()
+
+
+    print_metric(
+
+        "Total indexes",
+
+        result[
+            "total_indexes"
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Successful indexes",
+
+        result[
+            "successful_indexes"
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Failed indexes",
+
+        result[
+            "failed_indexes"
+        ]
+
+    )
+
+
+    return result
+
+
+# ==========================================================
+# STEP 7 — ANALYTICAL SQL VIEWS
+# ==========================================================
+
+def run_analytical_views():
+
+    print_section(
+        "STEP 7 — ANALYTICAL SQL VIEWS"
+    )
+
+
+    view_manager = (
+        AnalyticalViewManager()
+    )
+
+
+    result = (
+
+        view_manager.create_all()
+
+    )
+
+
+    audit = result[
+        "audit_report"
+    ]
+
+
+    print_section(
+        "SQL VIEW VALIDATION"
+    )
+
+
+    if audit.empty:
+
+        print(
+
+            "No analytical SQL "
+            "view results generated."
+
+        )
+
+    else:
+
+        print(
+
+            audit[
+
+                [
+
+                    "view_name",
+
+                    "row_count",
+
+                    "column_count",
+
+                    "status",
+
+                    "error"
+
+                ]
+
+            ].to_string(
+                index=False
+            )
+
+        )
+
+
+    print_separator()
+
+
+    print_metric(
+
+        "Total SQL views",
+
+        result[
+            "total_views"
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Successful SQL views",
+
+        result[
+            "successful_views"
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Failed SQL views",
+
+        result[
+            "failed_views"
+        ]
+
+    )
+
+
+    return result
+
+# ==========================================================
+# STEP 8 — FINANCIAL ANALYTICS EXECUTION
+# ==========================================================
+
+def run_financial_analytics():
+
+    print_section(
+        "STEP 8 — FINANCIAL ANALYTICS EXECUTION"
+    )
+
+
+    # ------------------------------------------------------
+    # Initialize Analytics Runner
+    # ------------------------------------------------------
+
+    analytics_runner = (
+        FinancialAnalyticsRunner()
+    )
+
+
+    # ------------------------------------------------------
+    # Execute and Export All Queries
+    # ------------------------------------------------------
+
+    analytics_result = (
+
+        analytics_runner.run_all()
+
+    )
+
+
+    # ------------------------------------------------------
+    # Query Execution Audit
+    # ------------------------------------------------------
+
+    print_section(
+        "ANALYTICAL QUERY EXECUTION AUDIT"
+    )
+
+
+    query_audit = (
+
+        analytics_result[
+            "query_audit"
+        ]
+
+    )
+
+
+    if query_audit.empty:
+
+        print(
+
+            "No analytical query "
+            "audit results were generated."
+
+        )
+
+    else:
+
+        display_columns = [
+
+            "query_name",
+
+            "rows_returned",
+
+            "columns_returned",
+
+            "execution_time_ms",
+
+            "status"
+
+        ]
+
+
+        print(
+
+            query_audit[
+                display_columns
+            ]
+            .to_string(
+                index=False
+            )
+
+        )
+
+
+    # ------------------------------------------------------
+    # Analytics Export Manifest
+    # ------------------------------------------------------
+
+    print_section(
+        "ANALYTICS EXPORT MANIFEST"
+    )
+
+
+    export_manifest = (
+
+        analytics_result[
+            "export_manifest"
+        ]
+
+    )
+
+
+    if export_manifest.empty:
+
+        print(
+
+            "No analytics export "
+            "records were generated."
+
+        )
+
+    else:
+
+        display_columns = [
+
+            "query_name",
+
+            "rows",
+
+            "columns",
+
+            "status"
+
+        ]
+
+
+        print(
+
+            export_manifest[
+                display_columns
+            ]
+            .to_string(
+                index=False
+            )
+
+        )
+
+
+    # ------------------------------------------------------
+    # Financial Analytics Statistics
+    # ------------------------------------------------------
+
+    print_section(
+        "FINANCIAL ANALYTICS STATISTICS"
+    )
+
+
+    print_metric(
+
+        "Total analytical queries",
+
+        analytics_result[
+            "total_queries"
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Successful queries",
+
+        analytics_result[
+            "successful_queries"
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Failed queries",
+
+        analytics_result[
+            "failed_queries"
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Total rows exported",
+
+        analytics_result[
+            "total_rows_exported"
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Analytics output folder",
+
+        analytics_result[
+            "analytics_output_dir"
+        ]
+
+    )
+
+
+    return analytics_result
+
+
+# ==========================================================
+# GENERATED DELIVERABLES
+# ==========================================================
+
+def print_generated_deliverables():
+
+    print_section(
+        "SPRINT 1 — GENERATED DELIVERABLES"
+    )
+
+
+    report_paths = [
+
+        OUTPUT_DIR
+        / "load_audit.csv",
+
+        OUTPUT_DIR
+        / "validation_failures.csv",
+
+        OUTPUT_DIR
+        / "processed_data_manifest.csv",
+
+        OUTPUT_DIR
+        / "database_load_audit.csv",
+
+        OUTPUT_DIR
+        / "database_integrity_report.csv",
+
+        OUTPUT_DIR
+        / "database_table_summary.csv",
+
+        OUTPUT_DIR
+        / "database_index_audit.csv",
+
+        OUTPUT_DIR
+        / "sql_view_validation.csv",
+
+        OUTPUT_DIR
+        / "analytical_query_audit.csv",
+
+        OUTPUT_DIR
+        / "analytics_export_manifest.csv",
+
+        Path(
+            "database"
+        )
+        / "n100_financial.db"
+
+    ]
+
+
+    print_report_status(
+        report_paths
+    )
+
+
+# ==========================================================
+# COMPLETE PIPELINE STATUS
+# ==========================================================
+
+def print_pipeline_status(
+
+    datasets,
+
+    export_result,
+
+    database_result,
+
+    index_result,
+
+    view_result, 
+
+    analytics_result
+
+):
+
+    print_section(
+        "SPRINT 1 — DAY 4 TO DAY 6 STATUS"
+    )
+
+
+    export_success = (
+
+        export_result[
+            "failed_exports"
+        ] == 0
+
+        and
+
+        export_result[
+            "successful_exports"
+        ] == len(datasets)
+
+    )
+
+
+    database_success = (
+
+        database_result[
+            "failed_loads"
+        ] == 0
+
+        and
+
+        database_result[
+            "successful_loads"
+        ] == len(datasets)
+
+    )
+
+
+    index_success = (
+
+        index_result[
+            "failed_indexes"
+        ] == 0
+
+    )
+
+
+    view_success = (
+
+        view_result[
+            "failed_views"
+        ] == 0
+
+    )
+
+    analytics_success = (
+
+        analytics_result[
+            "failed_queries"
+        ] == 0
+
+        and
+
+        analytics_result[
+            "successful_queries"
+        ]
+
+        ==
+
+        analytics_result[
+            "total_queries"
+        ]
+
+    )
+
+
+    pipeline_success = all(
+
+        [
+
+            export_success,
+
+            database_success,
+
+            index_success,
+
+            view_success
+
+        ]
+
+    )
+
+
+    print_metric(
+
+        "Processed-data export",
+
+        (
+            "SUCCESS"
+
+            if export_success
+
+            else
+
+            "FAILED"
+        )
+
+    )
+
+
+    print_metric(
+
+        "SQLite database loading",
+
+        (
+            "SUCCESS"
+
+            if database_success
+
+            else
+
+            "FAILED"
+        )
+
+    )
+
+
+    print_metric(
+
+        "Database indexes",
+
+        (
+            "SUCCESS"
+
+            if index_success
+
+            else
+
+            "FAILED"
+        )
+
+    )
+
+
+    print_metric(
+
+        "Analytical SQL views",
+
+        (
+            "SUCCESS"
+
+            if view_success
+
+            else
+
+            "FAILED"
+        )
+
+    )
+
+    print_metric(
+
+        "Financial analytics",
+
+        (
+
+            "SUCCESS"
+
+            if analytics_success
+
+            else
+
+            "FAILED"
+        )
+
+    )
+
+
+    print_separator()
+
+
+    if pipeline_success:
+
+        print(
+
+            "Overall Status: "
+            "COMPLETED SUCCESSFULLY"
+
+        )
+
+
+        print(
+
+            "\nThe processed-data layer, "
+            "SQLite database, database indexes, "
+            "integrity audit, analytical SQL views, "
+            "and financial analytics outputs were "
+            "generated successfully."
 
         )
 
@@ -363,40 +1467,286 @@ def main():
 
         print(
 
-            "Status: COMPLETED WITH EXPORT ISSUES"
+            "Overall Status: "
+            "COMPLETED WITH ISSUES"
 
         )
+
 
         print(
 
-            f"{failed_exports} dataset export(s) "
-            "require investigation."
+            "\nReview the failed pipeline "
+            "components before continuing."
 
         )
 
 
     print(
 
-        "\nProcessed data location:"
-
-    )
-
-    print(
-
-        "data/processed/"
+        "\nKnown source-data integrity "
+        "findings remain documented in:"
 
     )
 
 
     print(
 
-        "\nSprint 1 Day 4 "
-        "Completed Successfully"
+        "output/"
+        "database_integrity_report.csv"
 
     )
 
 
-    print("=" * 80)
+    print(
+
+        "\nSprint 1 Days 4–7 "
+        "Pipeline Execution Completed"
+
+    )
+
+
+# ==========================================================
+# MAIN APPLICATION
+# ==========================================================
+
+def main():
+
+    print_section(
+
+        "N100 FINANCIAL INTELLIGENCE PLATFORM\n"
+
+        "SPRINT 1 — DAYS 4 TO 7\n"
+
+        "PROCESSED DATA, SQLITE DATABASE, "
+        "INTEGRITY, SQL AND FINANCIAL ANALYTICS"
+
+    )
+
+
+    # ------------------------------------------------------
+    # Step 1 — Load datasets
+    # ------------------------------------------------------
+
+    (
+
+        datasets,
+
+        loader,
+
+        successful_loads,
+
+        failed_loads
+
+    ) = run_dataset_loading()
+
+
+    if not datasets:
+
+        print_section(
+            "PIPELINE TERMINATED"
+        )
+
+
+        print(
+
+            "No source datasets were loaded. "
+            "The pipeline cannot continue."
+
+        )
+
+
+        return
+
+
+    # ------------------------------------------------------
+    # Step 2 — Validate datasets
+    # ------------------------------------------------------
+
+    validator, validation_report = (
+
+        run_data_validation(
+            datasets
+        )
+
+    )
+
+
+    # ------------------------------------------------------
+    # Step 3 — Export processed datasets
+    # ------------------------------------------------------
+
+    export_result = (
+
+        run_processed_export(
+            datasets
+        )
+
+    )
+
+
+    if (
+
+        export_result[
+            "failed_exports"
+        ] > 0
+
+    ):
+
+        print_section(
+            "PIPELINE TERMINATED"
+        )
+
+
+        print(
+
+            "One or more processed-data "
+            "exports failed."
+
+        )
+
+
+        print(
+
+            "Database loading was skipped "
+            "to prevent partial ingestion."
+
+        )
+
+
+        return
+
+
+    # ------------------------------------------------------
+    # Step 4 — Load SQLite database
+    # ------------------------------------------------------
+
+    database_result = (
+
+        run_database_loading(
+            datasets
+        )
+
+    )
+
+
+    if (
+
+        database_result[
+            "failed_loads"
+        ] > 0
+
+    ):
+
+        print_section(
+            "PIPELINE TERMINATED"
+        )
+
+
+        print(
+
+            "One or more SQLite database "
+            "loads failed."
+
+        )
+
+
+        print(
+
+            "Database optimization and "
+            "view generation were skipped."
+
+        )
+
+
+        return
+
+
+    # ------------------------------------------------------
+    # Step 5 — Validate database integrity
+    # ------------------------------------------------------
+
+    integrity_result = (
+
+        run_integrity_validation()
+
+    )
+
+
+    # ------------------------------------------------------
+    # Step 6 — Optimize indexes
+    # ------------------------------------------------------
+
+    index_result = (
+
+        run_index_optimization()
+
+    )
+
+
+    # ------------------------------------------------------
+    # Step 7 — Create analytical views
+    # ------------------------------------------------------
+
+    view_result = (
+
+        run_analytical_views()
+
+    )
+
+    # ------------------------------------------------------
+    # Step 8 — Execute financial analytics
+    # ------------------------------------------------------
+
+    analytics_result = (
+
+        run_financial_analytics()
+
+    )
+
+
+    # ------------------------------------------------------
+    # Deliverables
+    # ------------------------------------------------------
+
+    print_generated_deliverables()
+
+
+    # ------------------------------------------------------
+    # Final status
+    # ------------------------------------------------------
+
+    print_pipeline_status(
+
+        datasets=
+
+        datasets,
+
+        export_result=
+
+        export_result,
+
+        database_result=
+
+        database_result,
+
+        index_result=
+
+        index_result,
+
+        view_result=
+
+        view_result,
+
+        analytics_result=
+
+        analytics_result
+
+    )
+
+
+    print(
+        "=" * SEPARATOR_LENGTH
+    )
 
 
 # ==========================================================
