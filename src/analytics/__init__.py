@@ -9,6 +9,14 @@ from src.analytics.financial_queries import (
 from src.analytics.analytics_runner import (
     FinancialAnalyticsRunner
 )
+from src.analytics.ratios import (
+    FinancialRatioCalculator,
+    RatioResult
+)
+from src.analytics.cagr import (
+    CAGRCalculator,
+    CAGRResult
+)
 
 
 __all__ = [
@@ -17,6 +25,14 @@ __all__ = [
 
     "FinancialQueries",
 
-    "FinancialAnalyticsRunner"
+    "FinancialAnalyticsRunner",
+
+    "FinancialRatioCalculator",
+
+    "RatioResult",
+
+    "CAGRCalculator",
+
+    "CAGRResult",
 
 ]
