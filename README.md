@@ -1,6 +1,6 @@
 # N100 Financial Intelligence Platform
 
-## Sprint 1 & Sprint 2 — End-to-End Financial Intelligence Platform
+## Sprint 1, Sprint 2 & Sprint 3 — End-to-End Financial Intelligence Platform
 
 The **N100 Financial Intelligence Platform** is a modular financial data-engineering and analytics system designed to transform raw company, financial-statement, market, sector, and fundamental datasets into a validated, standardized, database-driven, and analytics-ready intelligence layer.
 
@@ -731,3 +731,86 @@ Days          : 14/14 COMPLETED
 Analytics     : 10/10 SUCCESSFUL
 Pipeline      : OPERATIONAL
 ```
+
+---
+
+# Sprint 3 (Days 15–17)
+
+## Overview
+
+Sprint 3 introduces intelligent financial screening and benchmarking capabilities. Three major modules were developed:
+
+- Financial Screener
+- Preset Stock Screeners
+- Peer Comparison Engine
+
+## Day 15 – Financial Screener
+
+- Configurable threshold-based screening
+- YAML configuration
+- ROE, ROCE, OPM, Sales and Market Cap filters
+- Composite Quality Score
+- Ranked company output
+
+## Day 16 – Preset Stock Screeners
+
+Implemented:
+
+- Quality Screener
+- Growth Screener
+- Value Screener
+- Large Cap Screener
+- Dividend Screener
+
+Features:
+
+- One-click execution
+- Automatic CSV generation
+- Batch execution
+
+## Day 17 – Peer Comparison Engine
+
+Implemented:
+
+- Sector-wise benchmarking
+- Financial rankings
+- ROE, ROCE, OPM comparison
+- Net Profit comparison
+- Market Capitalization comparison
+- CSV export
+
+## New Modules
+
+```text
+src/
+├── screener/
+│   ├── engine.py
+│   ├── filters.py
+│   ├── scoring.py
+│   ├── presets.py
+│   ├── export.py
+│   └── screener_config.yaml
+└── peer/
+    ├── engine.py
+    ├── ranking.py
+    ├── export.py
+    └── peer_runner.py
+```
+
+## Deliverables
+
+- quality_screener.csv
+- growth_screener.csv
+- value_screener.csv
+- large_cap_screener.csv
+- dividend_screener.csv
+- peer_comparison.csv
+- peer_rankings.csv
+- peer_summary.csv
+
+## Status
+
+Sprint 1 : COMPLETED
+Sprint 2 : COMPLETED
+Sprint 3 (Days 15–17) : COMPLETED
+Pipeline : OPERATIONAL

@@ -3,6 +3,7 @@ from .portfolio_optimizer import PortfolioOptimizer
 from .export import PortfolioExporter
 from .sector_allocator import SectorAllocator
 from .allocation import PortfolioAllocation
+from pathlib import Path
 
 
 class PortfolioRunner:
@@ -27,7 +28,43 @@ class PortfolioRunner:
             portfolio
         )
 
+        print(portfolio.columns.tolist())
+        print(portfolio.head())
+
         PortfolioExporter.save(portfolio)
+
+        # ----------------------------------------
+        # Sector Allocation
+        # ----------------------------------------
+
+        sector_allocation = (
+
+            portfolio
+
+            .groupby("broad_sector")
+
+            .agg(
+
+                companies=("company_name", "count"),
+
+                total_weight=("allocation_percent", "sum")
+
+            )
+
+            .reset_index()
+
+        )
+
+        output = Path("output") / "portfolio"
+        output.mkdir(parents=True, exist_ok=True)
+
+        sector_allocation.to_csv(
+
+            output / "sector_allocation.csv",
+
+            index=False
+
+        )
 
         print("\nPortfolio Optimization Completed\n")
 

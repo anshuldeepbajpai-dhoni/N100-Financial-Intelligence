@@ -9,6 +9,10 @@ from src.forecasting import ForecastRunner
 from src.portfolio import PortfolioRunner
 from src.risk import RiskRunner
 from src.reporting import ReportingRunner
+from src.screener.engine import ScreenerEngine
+from src.screener.presets import PRESET_SCREENERS
+from src.screener.export import ScreenerExporter
+from src.peer import PeerRunner
 from src.etl.config import (
     ALL_DATASETS,
     OUTPUT_DIR
@@ -1772,44 +1776,71 @@ def main():
 
     )
 
+    print("=" * 80)
+    print("STEP 13 : FINANCIAL SCREENER")
+    print("=" * 80)
+
+    engine = ScreenerEngine()
+
+    thresholds = {
+        "roe": 15,
+        "debt_equity": 1.0,
+        "free_cash_flow": 0,
+        "revenue_cagr_5y": 10
+    }
+
+    screener_result = engine.run(
+        snapshot,
+        thresholds
+    )
+
+    print()
+
+    print("Companies Selected :", len(screener_result))
+
+    print()
+
+    print(
+        screener_result.head(20).to_string(
+            index=False
+        )
+    )
+
+    print("=" * 80)
+    print("STEP 14 : PRESET STOCK SCREENERS")
+    print("=" * 80)
+
+    preset_results = {}
+
+    for preset in PRESET_SCREENERS:
+
+        preset_results[preset] = engine.run_preset(
+            snapshot,
+            preset,
+        )
+
+    ScreenerExporter.save_all(
+        preset_results
+    )
+
+    print("\nAll preset screeners exported.\n")
+
+    print("=" * 80)
+    print("STEP 15 : PEER COMPARISON ENGINE")
+    print("=" * 80)
+    
+    peer_runner = PeerRunner()
+    peer_result = peer_runner.run(
+        analytics_result
+    )
+   
+
     # ------------------------------------------------------
     # Deliverables
     # ------------------------------------------------------
 
     print_generated_deliverables()
 
-
-    # ------------------------------------------------------
-    # Final status
-    # ------------------------------------------------------
-
-    print_pipeline_status(
-
-        datasets=
-
-        datasets,
-
-        export_result=
-
-        export_result,
-
-        database_result=
-
-        database_result,
-
-        index_result=
-
-        index_result,
-
-        view_result=
-
-        view_result,
-
-        analytics_result=
-
-        analytics_result
-
-    )
 
 
     print(
