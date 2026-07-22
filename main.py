@@ -13,6 +13,9 @@ from src.screener.engine import ScreenerEngine
 from src.screener.presets import PRESET_SCREENERS
 from src.screener.export import ScreenerExporter
 from src.peer import PeerRunner
+from src.dashboard import DashboardRunner
+from src.validation import ValidationRunner
+from src.sector import SectorRunner
 from src.etl.config import (
     ALL_DATASETS,
     OUTPUT_DIR
@@ -1194,7 +1197,6 @@ def run_financial_analytics():
 
     return analytics_result
 
-
 # ==========================================================
 # GENERATED DELIVERABLES
 # ==========================================================
@@ -1202,14 +1204,15 @@ def run_financial_analytics():
 def print_generated_deliverables():
 
     print_section(
-        "SPRINT 1 & SPRINT 2 — GENERATED DELIVERABLES"
+        "SPRINT 1, SPRINT 2 & SPRINT 3 — GENERATED DELIVERABLES"
     )
 
     report_paths = [
 
-        # -----------------------------
-        # Day 1–7 Deliverables
-        # -----------------------------
+        # =====================================================
+        # SPRINT 1
+        # =====================================================
+
         OUTPUT_DIR / "load_audit.csv",
         OUTPUT_DIR / "validation_failures.csv",
         OUTPUT_DIR / "processed_data_manifest.csv",
@@ -1219,43 +1222,56 @@ def print_generated_deliverables():
         OUTPUT_DIR / "database_index_audit.csv",
         OUTPUT_DIR / "sql_view_validation.csv",
 
-        # -----------------------------
-        # Day 8 Deliverables
-        # -----------------------------
         OUTPUT_DIR / "analytical_query_audit.csv",
         OUTPUT_DIR / "analytics_export_manifest.csv",
 
-        # -----------------------------
-        # Day 9 Deliverables
-        # -----------------------------
         OUTPUT_DIR / "forecasting" / "forecast_summary.csv",
         OUTPUT_DIR / "forecasting" / "forecast_metrics.csv",
 
-        # -----------------------------
-        # Day 10 Deliverables
-        # -----------------------------
         OUTPUT_DIR / "portfolio" / "optimized_portfolio.csv",
         OUTPUT_DIR / "portfolio" / "sector_allocation.csv",
 
-        # -----------------------------
-        # Day 11 Deliverables
-        # -----------------------------
         OUTPUT_DIR / "risk" / "risk_scores.csv",
         OUTPUT_DIR / "risk" / "risk_summary.csv",
 
-        # -----------------------------
-        # Day 12 Deliverables
-        # -----------------------------
         OUTPUT_DIR / "reporting" / "executive_summary.csv",
         OUTPUT_DIR / "reporting" / "dashboard_dataset.csv",
 
-        # -----------------------------
-        # Database
-        # -----------------------------
-        Path("database") / "n100_financial.db"
+        # =====================================================
+        # SPRINT 2
+        # =====================================================
+
+        OUTPUT_DIR / "analytics" / "company_financial_snapshot.csv",
+        OUTPUT_DIR / "analytics" / "financial_ratios.csv",
+        OUTPUT_DIR / "analytics" / "sector_summary.csv",
+
+        # =====================================================
+        # SPRINT 3
+        # =====================================================
+
+        OUTPUT_DIR / "screener" / "screener_output.csv",
+        OUTPUT_DIR / "screener" / "preset_screeners.csv",
+
+        OUTPUT_DIR / "peer" / "peer_comparison.csv",
+        OUTPUT_DIR / "peer" / "peer_rankings.csv",
+        OUTPUT_DIR / "peer" / "peer_percentiles.csv",
+        OUTPUT_DIR / "peer" / "peer_summary.csv",
+
+        OUTPUT_DIR / "sector" / "sector_summary.csv",
+        OUTPUT_DIR / "sector" / "sector_rankings.csv",
+
+        OUTPUT_DIR / "dashboard" / "dashboard_dataset.csv",
+
+        # =====================================================
+        # DATABASE
+        # =====================================================
+
+        Path("database") / "n100_financial.db",
+
     ]
 
     print_report_status(report_paths)
+
 
 # ==========================================================
 # COMPLETE PIPELINE STATUS
@@ -1833,7 +1849,53 @@ def main():
     peer_result = peer_runner.run(
         analytics_result
     )
-   
+
+    print("=" * 80)
+    print("STEP 16 : SECTOR ANALYTICS")
+    print("=" * 80)
+
+    sector_runner = SectorRunner()
+
+    sector_results = sector_runner.run(
+        analytics_result
+    )
+
+    print("=" * 80)
+    print("STEP 17 : DASHBOARD DATASET GENERATOR")
+    print("=" * 80)
+
+    dashboard_runner = DashboardRunner()
+
+    dashboard_dataset = dashboard_runner.run(
+
+        analytics_result,
+
+        peer_result,
+
+        sector_results,
+
+        portfolio_result,
+
+        risk_result
+
+    )
+
+    print("=" * 80)
+    print("STEP 18 : PIPELINE VALIDATION")
+    print("=" * 80)
+
+    validation_runner = ValidationRunner()
+
+    status = validation_runner.run()
+
+    if status:
+
+        print("=" * 80)
+
+        print("SPRINT 03 COMPLETED SUCCESSFULLY")
+
+        print("=" * 80)
+    
 
     # ------------------------------------------------------
     # Deliverables

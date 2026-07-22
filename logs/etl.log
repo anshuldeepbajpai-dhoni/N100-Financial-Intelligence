@@ -7649,3 +7649,968 @@ All datasets loaded successfully.
 2026-07-21 14:16:36 | SUCCESS | Analytics result 'company_financial_snapshot' exported. Rows: 92 | Columns: 13
 2026-07-21 14:16:36 | SUCCESS | Analytical query audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\analytical_query_audit.csv
 2026-07-21 14:16:36 | SUCCESS | Financial analytics execution completed.
+2026-07-22 16:20:58 | INFO | Loading companies.xlsx
+2026-07-22 16:21:00 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-22 16:21:00 | INFO | Loading profitandloss.xlsx
+2026-07-22 16:21:01 | SUCCESS | profitandloss.xlsx Loaded Rows=1263 Columns=16
+2026-07-22 16:21:01 | INFO | Loading balancesheet.xlsx
+2026-07-22 16:21:01 | SUCCESS | balancesheet.xlsx Loaded Rows=1225 Columns=14
+2026-07-22 16:21:01 | INFO | Loading cashflow.xlsx
+2026-07-22 16:21:01 | SUCCESS | cashflow.xlsx Loaded Rows=1163 Columns=8
+2026-07-22 16:21:01 | INFO | Loading analysis.xlsx
+2026-07-22 16:21:02 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-22 16:21:02 | INFO | Loading documents.xlsx
+2026-07-22 16:21:02 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=5
+2026-07-22 16:21:02 | INFO | Loading prosandcons.xlsx
+2026-07-22 16:21:02 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-22 16:21:02 | INFO | Loading sectors.xlsx
+2026-07-22 16:21:02 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-22 16:21:02 | INFO | Loading stock_prices.xlsx
+2026-07-22 16:21:04 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-22 16:21:04 | INFO | Loading market_cap.xlsx
+2026-07-22 16:21:04 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=10
+2026-07-22 16:21:04 | INFO | Loading financial_ratios.xlsx
+2026-07-22 16:21:05 | SUCCESS | financial_ratios.xlsx Loaded Rows=1076 Columns=17
+2026-07-22 16:21:05 | INFO | Loading peer_groups.xlsx
+2026-07-22 16:21:05 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-22 16:21:05 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-22 16:21:05 | INFO | Starting Data Quality Validation...
+2026-07-22 16:21:05 | INFO | Validating companies.xlsx
+2026-07-22 16:21:05 | INFO | Validating profitandloss.xlsx
+2026-07-22 16:21:05 | INFO | Validating balancesheet.xlsx
+2026-07-22 16:21:05 | INFO | Validating cashflow.xlsx
+2026-07-22 16:21:05 | INFO | Validating analysis.xlsx
+2026-07-22 16:21:05 | INFO | Validating documents.xlsx
+2026-07-22 16:21:05 | INFO | Validating prosandcons.xlsx
+2026-07-22 16:21:05 | INFO | Validating sectors.xlsx
+2026-07-22 16:21:05 | INFO | Validating stock_prices.xlsx
+2026-07-22 16:21:05 | INFO | Validating market_cap.xlsx
+2026-07-22 16:21:05 | INFO | Validating financial_ratios.xlsx
+2026-07-22 16:21:05 | INFO | Validating peer_groups.xlsx
+2026-07-22 16:21:05 | SUCCESS | Validation report saved successfully.
+2026-07-22 16:21:05 | INFO | Starting processed-data export...
+2026-07-22 16:21:05 | SUCCESS | companies.xlsx exported Rows=92 Columns=12
+2026-07-22 16:21:05 | SUCCESS | profitandloss.xlsx exported Rows=1263 Columns=16
+2026-07-22 16:21:05 | SUCCESS | balancesheet.xlsx exported Rows=1225 Columns=14
+2026-07-22 16:21:05 | SUCCESS | cashflow.xlsx exported Rows=1163 Columns=8
+2026-07-22 16:21:05 | SUCCESS | analysis.xlsx exported Rows=20 Columns=6
+2026-07-22 16:21:06 | SUCCESS | documents.xlsx exported Rows=1585 Columns=5
+2026-07-22 16:21:06 | SUCCESS | prosandcons.xlsx exported Rows=16 Columns=4
+2026-07-22 16:21:06 | SUCCESS | sectors.xlsx exported Rows=92 Columns=6
+2026-07-22 16:21:06 | SUCCESS | stock_prices.xlsx exported Rows=5520 Columns=9
+2026-07-22 16:21:06 | SUCCESS | market_cap.xlsx exported Rows=552 Columns=10
+2026-07-22 16:21:06 | SUCCESS | financial_ratios.xlsx exported Rows=1076 Columns=17
+2026-07-22 16:21:06 | SUCCESS | peer_groups.xlsx exported Rows=56 Columns=4
+2026-07-22 16:21:06 | SUCCESS | Processed-data manifest saved: C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\processed_data_manifest.csv
+2026-07-22 16:21:06 | INFO | Starting processed-data database loading...
+2026-07-22 16:21:06 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:06 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:06 | INFO | SQLite database connection closed.
+2026-07-22 16:21:06 | SUCCESS | companies.xlsx loaded into SQLite table 'companies'.
+2026-07-22 16:21:06 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:06 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:06 | INFO | SQLite database connection closed.
+2026-07-22 16:21:06 | SUCCESS | profitandloss.xlsx loaded into SQLite table 'profitandloss'.
+2026-07-22 16:21:06 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | balancesheet.xlsx loaded into SQLite table 'balancesheet'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | cashflow.xlsx loaded into SQLite table 'cashflow'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | analysis.xlsx loaded into SQLite table 'analysis'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | documents.xlsx loaded into SQLite table 'documents'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | prosandcons.xlsx loaded into SQLite table 'prosandcons'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | sectors.xlsx loaded into SQLite table 'sectors'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | stock_prices.xlsx loaded into SQLite table 'stock_prices'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | market_cap.xlsx loaded into SQLite table 'market_cap'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | financial_ratios.xlsx loaded into SQLite table 'financial_ratios'.
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | peer_groups.xlsx loaded into SQLite table 'peer_groups'.
+2026-07-22 16:21:07 | SUCCESS | Database load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\database_load_audit.csv
+2026-07-22 16:21:07 | SUCCESS | Processed-data database loading completed.
+2026-07-22 16:21:07 | INFO | Starting SQLite database integrity validation...
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:07 | INFO | SQLite database connection closed.
+2026-07-22 16:21:07 | SUCCESS | Database integrity reports generated successfully.
+2026-07-22 16:21:07 | INFO | Starting SQLite database index creation...
+2026-07-22 16:21:07 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_analysis_company_id' created for 'analysis'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_balancesheet_company_id' created for 'balancesheet'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_balancesheet_year' created for 'balancesheet'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_balancesheet_company_year' created for 'balancesheet'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_cashflow_company_id' created for 'cashflow'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_cashflow_year' created for 'cashflow'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_cashflow_company_year' created for 'cashflow'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_companies_id' created for 'companies'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_documents_company_id' created for 'documents'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_documents_year' created for 'documents'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_documents_company_year' created for 'documents'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_financial_ratios_company_id' created for 'financial_ratios'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_financial_ratios_year' created for 'financial_ratios'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_financial_ratios_company_year' created for 'financial_ratios'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_market_cap_company_id' created for 'market_cap'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_market_cap_year' created for 'market_cap'.
+2026-07-22 16:21:07 | SUCCESS | Index 'idx_market_cap_company_year' created for 'market_cap'.
+2026-07-22 16:21:08 | SUCCESS | Index 'idx_peer_groups_company_id' created for 'peer_groups'.
+2026-07-22 16:21:08 | SUCCESS | Index 'idx_profitandloss_company_id' created for 'profitandloss'.
+2026-07-22 16:21:08 | SUCCESS | Index 'idx_profitandloss_year' created for 'profitandloss'.
+2026-07-22 16:21:08 | SUCCESS | Index 'idx_profitandloss_company_year' created for 'profitandloss'.
+2026-07-22 16:21:08 | SUCCESS | Index 'idx_prosandcons_company_id' created for 'prosandcons'.
+2026-07-22 16:21:08 | SUCCESS | Index 'idx_sectors_company_id' created for 'sectors'.
+2026-07-22 16:21:08 | SUCCESS | Index 'idx_stock_prices_company_id' created for 'stock_prices'.
+2026-07-22 16:21:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:08 | INFO | SQLite database connection closed.
+2026-07-22 16:21:08 | SUCCESS | Database index creation completed.
+2026-07-22 16:21:08 | INFO | Starting analytical SQL view creation...
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical view 'company_overview' created successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical view 'annual_profitability' created successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical view 'balance_sheet_summary' created successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical view 'cashflow_summary' created successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical view 'financial_ratio_summary' created successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical view 'company_market_performance' created successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical view 'sector_company_summary' created successfully.
+2026-07-22 16:21:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:21:08 | INFO | SQLite database connection closed.
+2026-07-22 16:21:08 | SUCCESS | Analytical SQL view creation completed.
+2026-07-22 16:21:08 | INFO | Starting predefined financial analytics...
+2026-07-22 16:21:08 | INFO | Executing analytical query: top_companies_by_market_cap
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'top_companies_by_market_cap' executed successfully. Rows: 20 | Time: 12.298 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'top_companies_by_market_cap' exported. Rows: 20 | Columns: 4
+2026-07-22 16:21:08 | INFO | Executing analytical query: highest_roe_companies
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'highest_roe_companies' executed successfully. Rows: 20 | Time: 5.768 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'highest_roe_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:21:08 | INFO | Executing analytical query: highest_roce_companies
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'highest_roce_companies' executed successfully. Rows: 20 | Time: 3.204 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'highest_roce_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:21:08 | INFO | Executing analytical query: latest_profitability_ranking
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'latest_profitability_ranking' executed successfully. Rows: 25 | Time: 10.983 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'latest_profitability_ranking' exported. Rows: 25 | Columns: 8
+2026-07-22 16:21:08 | INFO | Executing analytical query: highest_operating_margin
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'highest_operating_margin' executed successfully. Rows: 20 | Time: 12.652 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'highest_operating_margin' exported. Rows: 20 | Columns: 7
+2026-07-22 16:21:08 | INFO | Executing analytical query: annual_profitability_trend
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'annual_profitability_trend' executed successfully. Rows: 14 | Time: 7.683 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'annual_profitability_trend' exported. Rows: 14 | Columns: 6
+2026-07-22 16:21:08 | INFO | Executing analytical query: balance_sheet_leverage
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'balance_sheet_leverage' executed successfully. Rows: 25 | Time: 8.158 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'balance_sheet_leverage' exported. Rows: 25 | Columns: 7
+2026-07-22 16:21:08 | INFO | Executing analytical query: cashflow_performance
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'cashflow_performance' executed successfully. Rows: 25 | Time: 5.489 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'cashflow_performance' exported. Rows: 25 | Columns: 7
+2026-07-22 16:21:08 | INFO | Executing analytical query: sector_company_distribution
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'sector_company_distribution' executed successfully. Rows: 10 | Time: 7.357 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'sector_company_distribution' exported. Rows: 10 | Columns: 2
+2026-07-22 16:21:08 | INFO | Executing analytical query: company_financial_snapshot
+2026-07-22 16:21:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:21:08 | SUCCESS | Analytical query 'company_financial_snapshot' executed successfully. Rows: 92 | Time: 13.469 ms
+2026-07-22 16:21:08 | SUCCESS | Analytics result 'company_financial_snapshot' exported. Rows: 92 | Columns: 13
+2026-07-22 16:21:08 | SUCCESS | Analytical query audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\analytical_query_audit.csv
+2026-07-22 16:21:08 | SUCCESS | Financial analytics execution completed.
+2026-07-22 16:25:38 | INFO | Loading companies.xlsx
+2026-07-22 16:25:38 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-22 16:25:38 | INFO | Loading profitandloss.xlsx
+2026-07-22 16:25:38 | SUCCESS | profitandloss.xlsx Loaded Rows=1263 Columns=16
+2026-07-22 16:25:38 | INFO | Loading balancesheet.xlsx
+2026-07-22 16:25:38 | SUCCESS | balancesheet.xlsx Loaded Rows=1225 Columns=14
+2026-07-22 16:25:38 | INFO | Loading cashflow.xlsx
+2026-07-22 16:25:39 | SUCCESS | cashflow.xlsx Loaded Rows=1163 Columns=8
+2026-07-22 16:25:39 | INFO | Loading analysis.xlsx
+2026-07-22 16:25:39 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-22 16:25:39 | INFO | Loading documents.xlsx
+2026-07-22 16:25:39 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=5
+2026-07-22 16:25:39 | INFO | Loading prosandcons.xlsx
+2026-07-22 16:25:39 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-22 16:25:39 | INFO | Loading sectors.xlsx
+2026-07-22 16:25:39 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-22 16:25:39 | INFO | Loading stock_prices.xlsx
+2026-07-22 16:25:39 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-22 16:25:39 | INFO | Loading market_cap.xlsx
+2026-07-22 16:25:39 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=10
+2026-07-22 16:25:39 | INFO | Loading financial_ratios.xlsx
+2026-07-22 16:25:40 | SUCCESS | financial_ratios.xlsx Loaded Rows=1076 Columns=17
+2026-07-22 16:25:40 | INFO | Loading peer_groups.xlsx
+2026-07-22 16:25:40 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-22 16:25:40 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-22 16:25:40 | INFO | Starting Data Quality Validation...
+2026-07-22 16:25:40 | INFO | Validating companies.xlsx
+2026-07-22 16:25:40 | INFO | Validating profitandloss.xlsx
+2026-07-22 16:25:40 | INFO | Validating balancesheet.xlsx
+2026-07-22 16:25:40 | INFO | Validating cashflow.xlsx
+2026-07-22 16:25:40 | INFO | Validating analysis.xlsx
+2026-07-22 16:25:40 | INFO | Validating documents.xlsx
+2026-07-22 16:25:40 | INFO | Validating prosandcons.xlsx
+2026-07-22 16:25:40 | INFO | Validating sectors.xlsx
+2026-07-22 16:25:40 | INFO | Validating stock_prices.xlsx
+2026-07-22 16:25:40 | INFO | Validating market_cap.xlsx
+2026-07-22 16:25:40 | INFO | Validating financial_ratios.xlsx
+2026-07-22 16:25:40 | INFO | Validating peer_groups.xlsx
+2026-07-22 16:25:40 | SUCCESS | Validation report saved successfully.
+2026-07-22 16:25:40 | INFO | Starting processed-data export...
+2026-07-22 16:25:40 | SUCCESS | companies.xlsx exported Rows=92 Columns=12
+2026-07-22 16:25:40 | SUCCESS | profitandloss.xlsx exported Rows=1263 Columns=16
+2026-07-22 16:25:40 | SUCCESS | balancesheet.xlsx exported Rows=1225 Columns=14
+2026-07-22 16:25:40 | SUCCESS | cashflow.xlsx exported Rows=1163 Columns=8
+2026-07-22 16:25:40 | SUCCESS | analysis.xlsx exported Rows=20 Columns=6
+2026-07-22 16:25:41 | SUCCESS | documents.xlsx exported Rows=1585 Columns=5
+2026-07-22 16:25:41 | SUCCESS | prosandcons.xlsx exported Rows=16 Columns=4
+2026-07-22 16:25:41 | SUCCESS | sectors.xlsx exported Rows=92 Columns=6
+2026-07-22 16:25:41 | SUCCESS | stock_prices.xlsx exported Rows=5520 Columns=9
+2026-07-22 16:25:41 | SUCCESS | market_cap.xlsx exported Rows=552 Columns=10
+2026-07-22 16:25:41 | SUCCESS | financial_ratios.xlsx exported Rows=1076 Columns=17
+2026-07-22 16:25:41 | SUCCESS | peer_groups.xlsx exported Rows=56 Columns=4
+2026-07-22 16:25:41 | SUCCESS | Processed-data manifest saved: C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\processed_data_manifest.csv
+2026-07-22 16:25:41 | INFO | Starting processed-data database loading...
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | companies.xlsx loaded into SQLite table 'companies'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | profitandloss.xlsx loaded into SQLite table 'profitandloss'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | balancesheet.xlsx loaded into SQLite table 'balancesheet'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | cashflow.xlsx loaded into SQLite table 'cashflow'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | analysis.xlsx loaded into SQLite table 'analysis'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | documents.xlsx loaded into SQLite table 'documents'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | prosandcons.xlsx loaded into SQLite table 'prosandcons'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | sectors.xlsx loaded into SQLite table 'sectors'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | stock_prices.xlsx loaded into SQLite table 'stock_prices'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | market_cap.xlsx loaded into SQLite table 'market_cap'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | financial_ratios.xlsx loaded into SQLite table 'financial_ratios'.
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | peer_groups.xlsx loaded into SQLite table 'peer_groups'.
+2026-07-22 16:25:41 | SUCCESS | Database load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\database_load_audit.csv
+2026-07-22 16:25:41 | SUCCESS | Processed-data database loading completed.
+2026-07-22 16:25:41 | INFO | Starting SQLite database integrity validation...
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | Database integrity reports generated successfully.
+2026-07-22 16:25:41 | INFO | Starting SQLite database index creation...
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_analysis_company_id' created for 'analysis'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_balancesheet_company_id' created for 'balancesheet'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_balancesheet_year' created for 'balancesheet'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_balancesheet_company_year' created for 'balancesheet'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_cashflow_company_id' created for 'cashflow'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_cashflow_year' created for 'cashflow'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_cashflow_company_year' created for 'cashflow'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_companies_id' created for 'companies'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_documents_company_id' created for 'documents'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_documents_year' created for 'documents'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_documents_company_year' created for 'documents'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_financial_ratios_company_id' created for 'financial_ratios'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_financial_ratios_year' created for 'financial_ratios'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_financial_ratios_company_year' created for 'financial_ratios'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_market_cap_company_id' created for 'market_cap'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_market_cap_year' created for 'market_cap'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_market_cap_company_year' created for 'market_cap'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_peer_groups_company_id' created for 'peer_groups'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_profitandloss_company_id' created for 'profitandloss'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_profitandloss_year' created for 'profitandloss'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_profitandloss_company_year' created for 'profitandloss'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_prosandcons_company_id' created for 'prosandcons'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_sectors_company_id' created for 'sectors'.
+2026-07-22 16:25:41 | SUCCESS | Index 'idx_stock_prices_company_id' created for 'stock_prices'.
+2026-07-22 16:25:41 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:41 | INFO | SQLite database connection closed.
+2026-07-22 16:25:41 | SUCCESS | Database index creation completed.
+2026-07-22 16:25:41 | INFO | Starting analytical SQL view creation...
+2026-07-22 16:25:41 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:41 | SUCCESS | Analytical view 'company_overview' created successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical view 'annual_profitability' created successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical view 'balance_sheet_summary' created successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical view 'cashflow_summary' created successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical view 'financial_ratio_summary' created successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical view 'company_market_performance' created successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical view 'sector_company_summary' created successfully.
+2026-07-22 16:25:42 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:25:42 | INFO | SQLite database connection closed.
+2026-07-22 16:25:42 | SUCCESS | Analytical SQL view creation completed.
+2026-07-22 16:25:42 | INFO | Starting predefined financial analytics...
+2026-07-22 16:25:42 | INFO | Executing analytical query: top_companies_by_market_cap
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'top_companies_by_market_cap' executed successfully. Rows: 20 | Time: 7.655 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'top_companies_by_market_cap' exported. Rows: 20 | Columns: 4
+2026-07-22 16:25:42 | INFO | Executing analytical query: highest_roe_companies
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'highest_roe_companies' executed successfully. Rows: 20 | Time: 4.671 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'highest_roe_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:25:42 | INFO | Executing analytical query: highest_roce_companies
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'highest_roce_companies' executed successfully. Rows: 20 | Time: 5.004 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'highest_roce_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:25:42 | INFO | Executing analytical query: latest_profitability_ranking
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'latest_profitability_ranking' executed successfully. Rows: 25 | Time: 10.409 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'latest_profitability_ranking' exported. Rows: 25 | Columns: 8
+2026-07-22 16:25:42 | INFO | Executing analytical query: highest_operating_margin
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'highest_operating_margin' executed successfully. Rows: 20 | Time: 4.835 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'highest_operating_margin' exported. Rows: 20 | Columns: 7
+2026-07-22 16:25:42 | INFO | Executing analytical query: annual_profitability_trend
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'annual_profitability_trend' executed successfully. Rows: 14 | Time: 7.568 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'annual_profitability_trend' exported. Rows: 14 | Columns: 6
+2026-07-22 16:25:42 | INFO | Executing analytical query: balance_sheet_leverage
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'balance_sheet_leverage' executed successfully. Rows: 25 | Time: 5.458 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'balance_sheet_leverage' exported. Rows: 25 | Columns: 7
+2026-07-22 16:25:42 | INFO | Executing analytical query: cashflow_performance
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'cashflow_performance' executed successfully. Rows: 25 | Time: 5.975 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'cashflow_performance' exported. Rows: 25 | Columns: 7
+2026-07-22 16:25:42 | INFO | Executing analytical query: sector_company_distribution
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'sector_company_distribution' executed successfully. Rows: 10 | Time: 3.087 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'sector_company_distribution' exported. Rows: 10 | Columns: 2
+2026-07-22 16:25:42 | INFO | Executing analytical query: company_financial_snapshot
+2026-07-22 16:25:42 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:25:42 | SUCCESS | Analytical query 'company_financial_snapshot' executed successfully. Rows: 92 | Time: 9.611 ms
+2026-07-22 16:25:42 | SUCCESS | Analytics result 'company_financial_snapshot' exported. Rows: 92 | Columns: 13
+2026-07-22 16:25:42 | SUCCESS | Analytical query audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\analytical_query_audit.csv
+2026-07-22 16:25:42 | SUCCESS | Financial analytics execution completed.
+2026-07-22 16:32:04 | INFO | Loading companies.xlsx
+2026-07-22 16:32:07 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-22 16:32:07 | INFO | Loading profitandloss.xlsx
+2026-07-22 16:32:08 | SUCCESS | profitandloss.xlsx Loaded Rows=1263 Columns=16
+2026-07-22 16:32:08 | INFO | Loading balancesheet.xlsx
+2026-07-22 16:32:09 | SUCCESS | balancesheet.xlsx Loaded Rows=1225 Columns=14
+2026-07-22 16:32:09 | INFO | Loading cashflow.xlsx
+2026-07-22 16:32:09 | SUCCESS | cashflow.xlsx Loaded Rows=1163 Columns=8
+2026-07-22 16:32:09 | INFO | Loading analysis.xlsx
+2026-07-22 16:32:09 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-22 16:32:09 | INFO | Loading documents.xlsx
+2026-07-22 16:32:10 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=5
+2026-07-22 16:32:10 | INFO | Loading prosandcons.xlsx
+2026-07-22 16:32:10 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-22 16:32:10 | INFO | Loading sectors.xlsx
+2026-07-22 16:32:10 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-22 16:32:10 | INFO | Loading stock_prices.xlsx
+2026-07-22 16:32:12 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-22 16:32:12 | INFO | Loading market_cap.xlsx
+2026-07-22 16:32:13 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=10
+2026-07-22 16:32:13 | INFO | Loading financial_ratios.xlsx
+2026-07-22 16:32:14 | SUCCESS | financial_ratios.xlsx Loaded Rows=1076 Columns=17
+2026-07-22 16:32:14 | INFO | Loading peer_groups.xlsx
+2026-07-22 16:32:14 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-22 16:32:14 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-22 16:32:14 | INFO | Starting Data Quality Validation...
+2026-07-22 16:32:14 | INFO | Validating companies.xlsx
+2026-07-22 16:32:14 | INFO | Validating profitandloss.xlsx
+2026-07-22 16:32:14 | INFO | Validating balancesheet.xlsx
+2026-07-22 16:32:15 | INFO | Validating cashflow.xlsx
+2026-07-22 16:32:15 | INFO | Validating analysis.xlsx
+2026-07-22 16:32:15 | INFO | Validating documents.xlsx
+2026-07-22 16:32:15 | INFO | Validating prosandcons.xlsx
+2026-07-22 16:32:15 | INFO | Validating sectors.xlsx
+2026-07-22 16:32:15 | INFO | Validating stock_prices.xlsx
+2026-07-22 16:32:15 | INFO | Validating market_cap.xlsx
+2026-07-22 16:32:15 | INFO | Validating financial_ratios.xlsx
+2026-07-22 16:32:15 | INFO | Validating peer_groups.xlsx
+2026-07-22 16:32:15 | SUCCESS | Validation report saved successfully.
+2026-07-22 16:32:15 | INFO | Starting processed-data export...
+2026-07-22 16:32:15 | SUCCESS | companies.xlsx exported Rows=92 Columns=12
+2026-07-22 16:32:15 | SUCCESS | profitandloss.xlsx exported Rows=1263 Columns=16
+2026-07-22 16:32:15 | SUCCESS | balancesheet.xlsx exported Rows=1225 Columns=14
+2026-07-22 16:32:15 | SUCCESS | cashflow.xlsx exported Rows=1163 Columns=8
+2026-07-22 16:32:15 | SUCCESS | analysis.xlsx exported Rows=20 Columns=6
+2026-07-22 16:32:15 | SUCCESS | documents.xlsx exported Rows=1585 Columns=5
+2026-07-22 16:32:16 | SUCCESS | prosandcons.xlsx exported Rows=16 Columns=4
+2026-07-22 16:32:16 | SUCCESS | sectors.xlsx exported Rows=92 Columns=6
+2026-07-22 16:32:16 | SUCCESS | stock_prices.xlsx exported Rows=5520 Columns=9
+2026-07-22 16:32:16 | SUCCESS | market_cap.xlsx exported Rows=552 Columns=10
+2026-07-22 16:32:16 | SUCCESS | financial_ratios.xlsx exported Rows=1076 Columns=17
+2026-07-22 16:32:16 | SUCCESS | peer_groups.xlsx exported Rows=56 Columns=4
+2026-07-22 16:32:16 | SUCCESS | Processed-data manifest saved: C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\processed_data_manifest.csv
+2026-07-22 16:32:16 | INFO | Starting processed-data database loading...
+2026-07-22 16:32:16 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:16 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:16 | INFO | SQLite database connection closed.
+2026-07-22 16:32:16 | SUCCESS | companies.xlsx loaded into SQLite table 'companies'.
+2026-07-22 16:32:16 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:16 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:16 | INFO | SQLite database connection closed.
+2026-07-22 16:32:16 | SUCCESS | profitandloss.xlsx loaded into SQLite table 'profitandloss'.
+2026-07-22 16:32:16 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:16 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:16 | INFO | SQLite database connection closed.
+2026-07-22 16:32:16 | SUCCESS | balancesheet.xlsx loaded into SQLite table 'balancesheet'.
+2026-07-22 16:32:16 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:16 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:16 | INFO | SQLite database connection closed.
+2026-07-22 16:32:16 | SUCCESS | cashflow.xlsx loaded into SQLite table 'cashflow'.
+2026-07-22 16:32:16 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | analysis.xlsx loaded into SQLite table 'analysis'.
+2026-07-22 16:32:17 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | documents.xlsx loaded into SQLite table 'documents'.
+2026-07-22 16:32:17 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | prosandcons.xlsx loaded into SQLite table 'prosandcons'.
+2026-07-22 16:32:17 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | sectors.xlsx loaded into SQLite table 'sectors'.
+2026-07-22 16:32:17 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | stock_prices.xlsx loaded into SQLite table 'stock_prices'.
+2026-07-22 16:32:17 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | market_cap.xlsx loaded into SQLite table 'market_cap'.
+2026-07-22 16:32:17 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | financial_ratios.xlsx loaded into SQLite table 'financial_ratios'.
+2026-07-22 16:32:17 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | peer_groups.xlsx loaded into SQLite table 'peer_groups'.
+2026-07-22 16:32:17 | SUCCESS | Database load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\database_load_audit.csv
+2026-07-22 16:32:17 | SUCCESS | Processed-data database loading completed.
+2026-07-22 16:32:17 | INFO | Starting SQLite database integrity validation...
+2026-07-22 16:32:17 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:17 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:17 | INFO | SQLite database connection closed.
+2026-07-22 16:32:17 | SUCCESS | Database integrity reports generated successfully.
+2026-07-22 16:32:17 | INFO | Starting SQLite database index creation...
+2026-07-22 16:32:18 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_analysis_company_id' created for 'analysis'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_balancesheet_company_id' created for 'balancesheet'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_balancesheet_year' created for 'balancesheet'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_balancesheet_company_year' created for 'balancesheet'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_cashflow_company_id' created for 'cashflow'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_cashflow_year' created for 'cashflow'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_cashflow_company_year' created for 'cashflow'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_companies_id' created for 'companies'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_documents_company_id' created for 'documents'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_documents_year' created for 'documents'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_documents_company_year' created for 'documents'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_financial_ratios_company_id' created for 'financial_ratios'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_financial_ratios_year' created for 'financial_ratios'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_financial_ratios_company_year' created for 'financial_ratios'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_market_cap_company_id' created for 'market_cap'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_market_cap_year' created for 'market_cap'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_market_cap_company_year' created for 'market_cap'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_peer_groups_company_id' created for 'peer_groups'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_profitandloss_company_id' created for 'profitandloss'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_profitandloss_year' created for 'profitandloss'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_profitandloss_company_year' created for 'profitandloss'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_prosandcons_company_id' created for 'prosandcons'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_sectors_company_id' created for 'sectors'.
+2026-07-22 16:32:18 | SUCCESS | Index 'idx_stock_prices_company_id' created for 'stock_prices'.
+2026-07-22 16:32:18 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:18 | INFO | SQLite database connection closed.
+2026-07-22 16:32:18 | SUCCESS | Database index creation completed.
+2026-07-22 16:32:18 | INFO | Starting analytical SQL view creation...
+2026-07-22 16:32:18 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:18 | SUCCESS | Analytical view 'company_overview' created successfully.
+2026-07-22 16:32:18 | SUCCESS | Analytical view 'annual_profitability' created successfully.
+2026-07-22 16:32:18 | SUCCESS | Analytical view 'balance_sheet_summary' created successfully.
+2026-07-22 16:32:18 | SUCCESS | Analytical view 'cashflow_summary' created successfully.
+2026-07-22 16:32:18 | SUCCESS | Analytical view 'financial_ratio_summary' created successfully.
+2026-07-22 16:32:18 | SUCCESS | Analytical view 'company_market_performance' created successfully.
+2026-07-22 16:32:18 | SUCCESS | Analytical view 'sector_company_summary' created successfully.
+2026-07-22 16:32:18 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:32:18 | INFO | SQLite database connection closed.
+2026-07-22 16:32:18 | SUCCESS | Analytical SQL view creation completed.
+2026-07-22 16:32:18 | INFO | Starting predefined financial analytics...
+2026-07-22 16:32:18 | INFO | Executing analytical query: top_companies_by_market_cap
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'top_companies_by_market_cap' executed successfully. Rows: 20 | Time: 97.839 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'top_companies_by_market_cap' exported. Rows: 20 | Columns: 4
+2026-07-22 16:32:19 | INFO | Executing analytical query: highest_roe_companies
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'highest_roe_companies' executed successfully. Rows: 20 | Time: 73.070 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'highest_roe_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:32:19 | INFO | Executing analytical query: highest_roce_companies
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'highest_roce_companies' executed successfully. Rows: 20 | Time: 25.643 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'highest_roce_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:32:19 | INFO | Executing analytical query: latest_profitability_ranking
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'latest_profitability_ranking' executed successfully. Rows: 25 | Time: 83.706 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'latest_profitability_ranking' exported. Rows: 25 | Columns: 8
+2026-07-22 16:32:19 | INFO | Executing analytical query: highest_operating_margin
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'highest_operating_margin' executed successfully. Rows: 20 | Time: 15.791 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'highest_operating_margin' exported. Rows: 20 | Columns: 7
+2026-07-22 16:32:19 | INFO | Executing analytical query: annual_profitability_trend
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'annual_profitability_trend' executed successfully. Rows: 14 | Time: 21.095 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'annual_profitability_trend' exported. Rows: 14 | Columns: 6
+2026-07-22 16:32:19 | INFO | Executing analytical query: balance_sheet_leverage
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'balance_sheet_leverage' executed successfully. Rows: 25 | Time: 15.140 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'balance_sheet_leverage' exported. Rows: 25 | Columns: 7
+2026-07-22 16:32:19 | INFO | Executing analytical query: cashflow_performance
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'cashflow_performance' executed successfully. Rows: 25 | Time: 15.596 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'cashflow_performance' exported. Rows: 25 | Columns: 7
+2026-07-22 16:32:19 | INFO | Executing analytical query: sector_company_distribution
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'sector_company_distribution' executed successfully. Rows: 10 | Time: 16.487 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'sector_company_distribution' exported. Rows: 10 | Columns: 2
+2026-07-22 16:32:19 | INFO | Executing analytical query: company_financial_snapshot
+2026-07-22 16:32:19 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:32:19 | SUCCESS | Analytical query 'company_financial_snapshot' executed successfully. Rows: 92 | Time: 42.513 ms
+2026-07-22 16:32:19 | SUCCESS | Analytics result 'company_financial_snapshot' exported. Rows: 92 | Columns: 13
+2026-07-22 16:32:19 | SUCCESS | Analytical query audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\analytical_query_audit.csv
+2026-07-22 16:32:19 | SUCCESS | Financial analytics execution completed.
+2026-07-22 16:36:03 | INFO | Loading companies.xlsx
+2026-07-22 16:36:04 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-22 16:36:04 | INFO | Loading profitandloss.xlsx
+2026-07-22 16:36:04 | SUCCESS | profitandloss.xlsx Loaded Rows=1263 Columns=16
+2026-07-22 16:36:04 | INFO | Loading balancesheet.xlsx
+2026-07-22 16:36:05 | SUCCESS | balancesheet.xlsx Loaded Rows=1225 Columns=14
+2026-07-22 16:36:05 | INFO | Loading cashflow.xlsx
+2026-07-22 16:36:05 | SUCCESS | cashflow.xlsx Loaded Rows=1163 Columns=8
+2026-07-22 16:36:05 | INFO | Loading analysis.xlsx
+2026-07-22 16:36:05 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-22 16:36:05 | INFO | Loading documents.xlsx
+2026-07-22 16:36:05 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=5
+2026-07-22 16:36:05 | INFO | Loading prosandcons.xlsx
+2026-07-22 16:36:05 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-22 16:36:05 | INFO | Loading sectors.xlsx
+2026-07-22 16:36:05 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-22 16:36:05 | INFO | Loading stock_prices.xlsx
+2026-07-22 16:36:06 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-22 16:36:06 | INFO | Loading market_cap.xlsx
+2026-07-22 16:36:06 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=10
+2026-07-22 16:36:06 | INFO | Loading financial_ratios.xlsx
+2026-07-22 16:36:07 | SUCCESS | financial_ratios.xlsx Loaded Rows=1076 Columns=17
+2026-07-22 16:36:07 | INFO | Loading peer_groups.xlsx
+2026-07-22 16:36:07 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-22 16:36:07 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-22 16:36:07 | INFO | Starting Data Quality Validation...
+2026-07-22 16:36:07 | INFO | Validating companies.xlsx
+2026-07-22 16:36:07 | INFO | Validating profitandloss.xlsx
+2026-07-22 16:36:07 | INFO | Validating balancesheet.xlsx
+2026-07-22 16:36:07 | INFO | Validating cashflow.xlsx
+2026-07-22 16:36:07 | INFO | Validating analysis.xlsx
+2026-07-22 16:36:07 | INFO | Validating documents.xlsx
+2026-07-22 16:36:07 | INFO | Validating prosandcons.xlsx
+2026-07-22 16:36:07 | INFO | Validating sectors.xlsx
+2026-07-22 16:36:07 | INFO | Validating stock_prices.xlsx
+2026-07-22 16:36:07 | INFO | Validating market_cap.xlsx
+2026-07-22 16:36:07 | INFO | Validating financial_ratios.xlsx
+2026-07-22 16:36:07 | INFO | Validating peer_groups.xlsx
+2026-07-22 16:36:07 | SUCCESS | Validation report saved successfully.
+2026-07-22 16:36:07 | INFO | Starting processed-data export...
+2026-07-22 16:36:07 | SUCCESS | companies.xlsx exported Rows=92 Columns=12
+2026-07-22 16:36:07 | SUCCESS | profitandloss.xlsx exported Rows=1263 Columns=16
+2026-07-22 16:36:07 | SUCCESS | balancesheet.xlsx exported Rows=1225 Columns=14
+2026-07-22 16:36:08 | SUCCESS | cashflow.xlsx exported Rows=1163 Columns=8
+2026-07-22 16:36:08 | SUCCESS | analysis.xlsx exported Rows=20 Columns=6
+2026-07-22 16:36:08 | SUCCESS | documents.xlsx exported Rows=1585 Columns=5
+2026-07-22 16:36:08 | SUCCESS | prosandcons.xlsx exported Rows=16 Columns=4
+2026-07-22 16:36:08 | SUCCESS | sectors.xlsx exported Rows=92 Columns=6
+2026-07-22 16:36:08 | SUCCESS | stock_prices.xlsx exported Rows=5520 Columns=9
+2026-07-22 16:36:08 | SUCCESS | market_cap.xlsx exported Rows=552 Columns=10
+2026-07-22 16:36:08 | SUCCESS | financial_ratios.xlsx exported Rows=1076 Columns=17
+2026-07-22 16:36:08 | SUCCESS | peer_groups.xlsx exported Rows=56 Columns=4
+2026-07-22 16:36:08 | SUCCESS | Processed-data manifest saved: C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\processed_data_manifest.csv
+2026-07-22 16:36:08 | INFO | Starting processed-data database loading...
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:08 | INFO | SQLite database connection closed.
+2026-07-22 16:36:08 | SUCCESS | companies.xlsx loaded into SQLite table 'companies'.
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:08 | INFO | SQLite database connection closed.
+2026-07-22 16:36:08 | SUCCESS | profitandloss.xlsx loaded into SQLite table 'profitandloss'.
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:08 | INFO | SQLite database connection closed.
+2026-07-22 16:36:08 | SUCCESS | balancesheet.xlsx loaded into SQLite table 'balancesheet'.
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:08 | INFO | SQLite database connection closed.
+2026-07-22 16:36:08 | SUCCESS | cashflow.xlsx loaded into SQLite table 'cashflow'.
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:08 | INFO | SQLite database connection closed.
+2026-07-22 16:36:08 | SUCCESS | analysis.xlsx loaded into SQLite table 'analysis'.
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:08 | INFO | SQLite database connection closed.
+2026-07-22 16:36:08 | SUCCESS | documents.xlsx loaded into SQLite table 'documents'.
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:08 | INFO | SQLite database connection closed.
+2026-07-22 16:36:08 | SUCCESS | prosandcons.xlsx loaded into SQLite table 'prosandcons'.
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:08 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:08 | INFO | SQLite database connection closed.
+2026-07-22 16:36:08 | SUCCESS | sectors.xlsx loaded into SQLite table 'sectors'.
+2026-07-22 16:36:08 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:09 | INFO | SQLite database connection closed.
+2026-07-22 16:36:09 | SUCCESS | stock_prices.xlsx loaded into SQLite table 'stock_prices'.
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:09 | INFO | SQLite database connection closed.
+2026-07-22 16:36:09 | SUCCESS | market_cap.xlsx loaded into SQLite table 'market_cap'.
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:09 | INFO | SQLite database connection closed.
+2026-07-22 16:36:09 | SUCCESS | financial_ratios.xlsx loaded into SQLite table 'financial_ratios'.
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:09 | INFO | SQLite database connection closed.
+2026-07-22 16:36:09 | SUCCESS | peer_groups.xlsx loaded into SQLite table 'peer_groups'.
+2026-07-22 16:36:09 | SUCCESS | Database load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\database_load_audit.csv
+2026-07-22 16:36:09 | SUCCESS | Processed-data database loading completed.
+2026-07-22 16:36:09 | INFO | Starting SQLite database integrity validation...
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:09 | INFO | SQLite database connection closed.
+2026-07-22 16:36:09 | SUCCESS | Database integrity reports generated successfully.
+2026-07-22 16:36:09 | INFO | Starting SQLite database index creation...
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_analysis_company_id' created for 'analysis'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_balancesheet_company_id' created for 'balancesheet'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_balancesheet_year' created for 'balancesheet'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_balancesheet_company_year' created for 'balancesheet'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_cashflow_company_id' created for 'cashflow'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_cashflow_year' created for 'cashflow'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_cashflow_company_year' created for 'cashflow'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_companies_id' created for 'companies'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_documents_company_id' created for 'documents'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_documents_year' created for 'documents'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_documents_company_year' created for 'documents'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_financial_ratios_company_id' created for 'financial_ratios'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_financial_ratios_year' created for 'financial_ratios'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_financial_ratios_company_year' created for 'financial_ratios'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_market_cap_company_id' created for 'market_cap'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_market_cap_year' created for 'market_cap'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_market_cap_company_year' created for 'market_cap'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_peer_groups_company_id' created for 'peer_groups'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_profitandloss_company_id' created for 'profitandloss'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_profitandloss_year' created for 'profitandloss'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_profitandloss_company_year' created for 'profitandloss'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_prosandcons_company_id' created for 'prosandcons'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_sectors_company_id' created for 'sectors'.
+2026-07-22 16:36:09 | SUCCESS | Index 'idx_stock_prices_company_id' created for 'stock_prices'.
+2026-07-22 16:36:09 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:09 | INFO | SQLite database connection closed.
+2026-07-22 16:36:09 | SUCCESS | Database index creation completed.
+2026-07-22 16:36:09 | INFO | Starting analytical SQL view creation...
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical view 'company_overview' created successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical view 'annual_profitability' created successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical view 'balance_sheet_summary' created successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical view 'cashflow_summary' created successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical view 'financial_ratio_summary' created successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical view 'company_market_performance' created successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical view 'sector_company_summary' created successfully.
+2026-07-22 16:36:09 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:36:09 | INFO | SQLite database connection closed.
+2026-07-22 16:36:09 | SUCCESS | Analytical SQL view creation completed.
+2026-07-22 16:36:09 | INFO | Starting predefined financial analytics...
+2026-07-22 16:36:09 | INFO | Executing analytical query: top_companies_by_market_cap
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'top_companies_by_market_cap' executed successfully. Rows: 20 | Time: 7.158 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'top_companies_by_market_cap' exported. Rows: 20 | Columns: 4
+2026-07-22 16:36:09 | INFO | Executing analytical query: highest_roe_companies
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'highest_roe_companies' executed successfully. Rows: 20 | Time: 4.635 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'highest_roe_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:36:09 | INFO | Executing analytical query: highest_roce_companies
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'highest_roce_companies' executed successfully. Rows: 20 | Time: 4.179 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'highest_roce_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:36:09 | INFO | Executing analytical query: latest_profitability_ranking
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'latest_profitability_ranking' executed successfully. Rows: 25 | Time: 5.897 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'latest_profitability_ranking' exported. Rows: 25 | Columns: 8
+2026-07-22 16:36:09 | INFO | Executing analytical query: highest_operating_margin
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'highest_operating_margin' executed successfully. Rows: 20 | Time: 5.887 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'highest_operating_margin' exported. Rows: 20 | Columns: 7
+2026-07-22 16:36:09 | INFO | Executing analytical query: annual_profitability_trend
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'annual_profitability_trend' executed successfully. Rows: 14 | Time: 5.200 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'annual_profitability_trend' exported. Rows: 14 | Columns: 6
+2026-07-22 16:36:09 | INFO | Executing analytical query: balance_sheet_leverage
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'balance_sheet_leverage' executed successfully. Rows: 25 | Time: 7.330 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'balance_sheet_leverage' exported. Rows: 25 | Columns: 7
+2026-07-22 16:36:09 | INFO | Executing analytical query: cashflow_performance
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'cashflow_performance' executed successfully. Rows: 25 | Time: 5.216 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'cashflow_performance' exported. Rows: 25 | Columns: 7
+2026-07-22 16:36:09 | INFO | Executing analytical query: sector_company_distribution
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'sector_company_distribution' executed successfully. Rows: 10 | Time: 5.807 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'sector_company_distribution' exported. Rows: 10 | Columns: 2
+2026-07-22 16:36:09 | INFO | Executing analytical query: company_financial_snapshot
+2026-07-22 16:36:09 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:36:09 | SUCCESS | Analytical query 'company_financial_snapshot' executed successfully. Rows: 92 | Time: 11.348 ms
+2026-07-22 16:36:09 | SUCCESS | Analytics result 'company_financial_snapshot' exported. Rows: 92 | Columns: 13
+2026-07-22 16:36:09 | SUCCESS | Analytical query audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\analytical_query_audit.csv
+2026-07-22 16:36:09 | SUCCESS | Financial analytics execution completed.
+2026-07-22 16:38:28 | INFO | Loading companies.xlsx
+2026-07-22 16:38:29 | SUCCESS | companies.xlsx Loaded Rows=92 Columns=12
+2026-07-22 16:38:29 | INFO | Loading profitandloss.xlsx
+2026-07-22 16:38:29 | SUCCESS | profitandloss.xlsx Loaded Rows=1263 Columns=16
+2026-07-22 16:38:29 | INFO | Loading balancesheet.xlsx
+2026-07-22 16:38:30 | SUCCESS | balancesheet.xlsx Loaded Rows=1225 Columns=14
+2026-07-22 16:38:30 | INFO | Loading cashflow.xlsx
+2026-07-22 16:38:30 | SUCCESS | cashflow.xlsx Loaded Rows=1163 Columns=8
+2026-07-22 16:38:30 | INFO | Loading analysis.xlsx
+2026-07-22 16:38:30 | SUCCESS | analysis.xlsx Loaded Rows=20 Columns=6
+2026-07-22 16:38:30 | INFO | Loading documents.xlsx
+2026-07-22 16:38:30 | SUCCESS | documents.xlsx Loaded Rows=1585 Columns=5
+2026-07-22 16:38:30 | INFO | Loading prosandcons.xlsx
+2026-07-22 16:38:30 | SUCCESS | prosandcons.xlsx Loaded Rows=16 Columns=4
+2026-07-22 16:38:30 | INFO | Loading sectors.xlsx
+2026-07-22 16:38:30 | SUCCESS | sectors.xlsx Loaded Rows=92 Columns=6
+2026-07-22 16:38:30 | INFO | Loading stock_prices.xlsx
+2026-07-22 16:38:32 | SUCCESS | stock_prices.xlsx Loaded Rows=5520 Columns=9
+2026-07-22 16:38:32 | INFO | Loading market_cap.xlsx
+2026-07-22 16:38:32 | SUCCESS | market_cap.xlsx Loaded Rows=552 Columns=10
+2026-07-22 16:38:32 | INFO | Loading financial_ratios.xlsx
+2026-07-22 16:38:32 | SUCCESS | financial_ratios.xlsx Loaded Rows=1076 Columns=17
+2026-07-22 16:38:32 | INFO | Loading peer_groups.xlsx
+2026-07-22 16:38:32 | SUCCESS | peer_groups.xlsx Loaded Rows=56 Columns=4
+2026-07-22 16:38:32 | SUCCESS | Load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\load_audit.csv
+2026-07-22 16:38:32 | INFO | Starting Data Quality Validation...
+2026-07-22 16:38:32 | INFO | Validating companies.xlsx
+2026-07-22 16:38:32 | INFO | Validating profitandloss.xlsx
+2026-07-22 16:38:32 | INFO | Validating balancesheet.xlsx
+2026-07-22 16:38:32 | INFO | Validating cashflow.xlsx
+2026-07-22 16:38:32 | INFO | Validating analysis.xlsx
+2026-07-22 16:38:32 | INFO | Validating documents.xlsx
+2026-07-22 16:38:32 | INFO | Validating prosandcons.xlsx
+2026-07-22 16:38:32 | INFO | Validating sectors.xlsx
+2026-07-22 16:38:32 | INFO | Validating stock_prices.xlsx
+2026-07-22 16:38:32 | INFO | Validating market_cap.xlsx
+2026-07-22 16:38:32 | INFO | Validating financial_ratios.xlsx
+2026-07-22 16:38:33 | INFO | Validating peer_groups.xlsx
+2026-07-22 16:38:33 | SUCCESS | Validation report saved successfully.
+2026-07-22 16:38:33 | INFO | Starting processed-data export...
+2026-07-22 16:38:33 | SUCCESS | companies.xlsx exported Rows=92 Columns=12
+2026-07-22 16:38:33 | SUCCESS | profitandloss.xlsx exported Rows=1263 Columns=16
+2026-07-22 16:38:33 | SUCCESS | balancesheet.xlsx exported Rows=1225 Columns=14
+2026-07-22 16:38:33 | SUCCESS | cashflow.xlsx exported Rows=1163 Columns=8
+2026-07-22 16:38:33 | SUCCESS | analysis.xlsx exported Rows=20 Columns=6
+2026-07-22 16:38:33 | SUCCESS | documents.xlsx exported Rows=1585 Columns=5
+2026-07-22 16:38:33 | SUCCESS | prosandcons.xlsx exported Rows=16 Columns=4
+2026-07-22 16:38:33 | SUCCESS | sectors.xlsx exported Rows=92 Columns=6
+2026-07-22 16:38:33 | SUCCESS | stock_prices.xlsx exported Rows=5520 Columns=9
+2026-07-22 16:38:33 | SUCCESS | market_cap.xlsx exported Rows=552 Columns=10
+2026-07-22 16:38:33 | SUCCESS | financial_ratios.xlsx exported Rows=1076 Columns=17
+2026-07-22 16:38:33 | SUCCESS | peer_groups.xlsx exported Rows=56 Columns=4
+2026-07-22 16:38:33 | SUCCESS | Processed-data manifest saved: C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\processed_data_manifest.csv
+2026-07-22 16:38:33 | INFO | Starting processed-data database loading...
+2026-07-22 16:38:33 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | companies.xlsx loaded into SQLite table 'companies'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | profitandloss.xlsx loaded into SQLite table 'profitandloss'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | balancesheet.xlsx loaded into SQLite table 'balancesheet'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | cashflow.xlsx loaded into SQLite table 'cashflow'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | analysis.xlsx loaded into SQLite table 'analysis'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | documents.xlsx loaded into SQLite table 'documents'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | prosandcons.xlsx loaded into SQLite table 'prosandcons'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | sectors.xlsx loaded into SQLite table 'sectors'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | stock_prices.xlsx loaded into SQLite table 'stock_prices'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | market_cap.xlsx loaded into SQLite table 'market_cap'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | financial_ratios.xlsx loaded into SQLite table 'financial_ratios'.
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | peer_groups.xlsx loaded into SQLite table 'peer_groups'.
+2026-07-22 16:38:34 | SUCCESS | Database load audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\database_load_audit.csv
+2026-07-22 16:38:34 | SUCCESS | Processed-data database loading completed.
+2026-07-22 16:38:34 | INFO | Starting SQLite database integrity validation...
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | Database integrity reports generated successfully.
+2026-07-22 16:38:34 | INFO | Starting SQLite database index creation...
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_analysis_company_id' created for 'analysis'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_balancesheet_company_id' created for 'balancesheet'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_balancesheet_year' created for 'balancesheet'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_balancesheet_company_year' created for 'balancesheet'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_cashflow_company_id' created for 'cashflow'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_cashflow_year' created for 'cashflow'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_cashflow_company_year' created for 'cashflow'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_companies_id' created for 'companies'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_documents_company_id' created for 'documents'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_documents_year' created for 'documents'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_documents_company_year' created for 'documents'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_financial_ratios_company_id' created for 'financial_ratios'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_financial_ratios_year' created for 'financial_ratios'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_financial_ratios_company_year' created for 'financial_ratios'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_market_cap_company_id' created for 'market_cap'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_market_cap_year' created for 'market_cap'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_market_cap_company_year' created for 'market_cap'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_peer_groups_company_id' created for 'peer_groups'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_profitandloss_company_id' created for 'profitandloss'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_profitandloss_year' created for 'profitandloss'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_profitandloss_company_year' created for 'profitandloss'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_prosandcons_company_id' created for 'prosandcons'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_sectors_company_id' created for 'sectors'.
+2026-07-22 16:38:34 | SUCCESS | Index 'idx_stock_prices_company_id' created for 'stock_prices'.
+2026-07-22 16:38:34 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:34 | INFO | SQLite database connection closed.
+2026-07-22 16:38:34 | SUCCESS | Database index creation completed.
+2026-07-22 16:38:34 | INFO | Starting analytical SQL view creation...
+2026-07-22 16:38:34 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:34 | SUCCESS | Analytical view 'company_overview' created successfully.
+2026-07-22 16:38:34 | SUCCESS | Analytical view 'annual_profitability' created successfully.
+2026-07-22 16:38:34 | SUCCESS | Analytical view 'balance_sheet_summary' created successfully.
+2026-07-22 16:38:34 | SUCCESS | Analytical view 'cashflow_summary' created successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical view 'financial_ratio_summary' created successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical view 'company_market_performance' created successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical view 'sector_company_summary' created successfully.
+2026-07-22 16:38:35 | SUCCESS | Database transaction committed successfully.
+2026-07-22 16:38:35 | INFO | SQLite database connection closed.
+2026-07-22 16:38:35 | SUCCESS | Analytical SQL view creation completed.
+2026-07-22 16:38:35 | INFO | Starting predefined financial analytics...
+2026-07-22 16:38:35 | INFO | Executing analytical query: top_companies_by_market_cap
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'top_companies_by_market_cap' executed successfully. Rows: 20 | Time: 7.162 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'top_companies_by_market_cap' exported. Rows: 20 | Columns: 4
+2026-07-22 16:38:35 | INFO | Executing analytical query: highest_roe_companies
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'highest_roe_companies' executed successfully. Rows: 20 | Time: 6.544 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'highest_roe_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:38:35 | INFO | Executing analytical query: highest_roce_companies
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'highest_roce_companies' executed successfully. Rows: 20 | Time: 3.919 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'highest_roce_companies' exported. Rows: 20 | Columns: 3
+2026-07-22 16:38:35 | INFO | Executing analytical query: latest_profitability_ranking
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'latest_profitability_ranking' executed successfully. Rows: 25 | Time: 7.001 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'latest_profitability_ranking' exported. Rows: 25 | Columns: 8
+2026-07-22 16:38:35 | INFO | Executing analytical query: highest_operating_margin
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'highest_operating_margin' executed successfully. Rows: 20 | Time: 7.338 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'highest_operating_margin' exported. Rows: 20 | Columns: 7
+2026-07-22 16:38:35 | INFO | Executing analytical query: annual_profitability_trend
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'annual_profitability_trend' executed successfully. Rows: 14 | Time: 6.405 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'annual_profitability_trend' exported. Rows: 14 | Columns: 6
+2026-07-22 16:38:35 | INFO | Executing analytical query: balance_sheet_leverage
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'balance_sheet_leverage' executed successfully. Rows: 25 | Time: 6.810 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'balance_sheet_leverage' exported. Rows: 25 | Columns: 7
+2026-07-22 16:38:35 | INFO | Executing analytical query: cashflow_performance
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'cashflow_performance' executed successfully. Rows: 25 | Time: 7.281 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'cashflow_performance' exported. Rows: 25 | Columns: 7
+2026-07-22 16:38:35 | INFO | Executing analytical query: sector_company_distribution
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'sector_company_distribution' executed successfully. Rows: 10 | Time: 3.992 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'sector_company_distribution' exported. Rows: 10 | Columns: 2
+2026-07-22 16:38:35 | INFO | Executing analytical query: company_financial_snapshot
+2026-07-22 16:38:35 | SUCCESS | SQLite database connection established successfully.
+2026-07-22 16:38:35 | SUCCESS | Analytical query 'company_financial_snapshot' executed successfully. Rows: 92 | Time: 13.526 ms
+2026-07-22 16:38:35 | SUCCESS | Analytics result 'company_financial_snapshot' exported. Rows: 92 | Columns: 13
+2026-07-22 16:38:35 | SUCCESS | Analytical query audit saved to C:\Users\Anshul Deep Bajpai\Desktop\N100-Financial-Intelligence\output\analytical_query_audit.csv
+2026-07-22 16:38:35 | SUCCESS | Financial analytics execution completed.

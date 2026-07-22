@@ -1,5 +1,5 @@
 from .ranking import PeerRanking
-
+from .percentile import PeerPercentile
 
 class PeerEngine:
 
@@ -7,8 +7,10 @@ class PeerEngine:
 
         ranked = PeerRanking.rank(snapshot)
 
+        percentiles = PeerPercentile.calculate(ranked)
+
         summary = (
-            ranked
+            percentiles
             .groupby("broad_sector")
             .agg(
                 companies=("company_name", "count"),
@@ -21,7 +23,7 @@ class PeerEngine:
 
         return {
 
-            "peer_comparison": ranked,
+            "peer_comparison": percentiles,
 
             "peer_summary": summary,
 
